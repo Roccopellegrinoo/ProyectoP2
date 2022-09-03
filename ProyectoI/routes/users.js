@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
+/*
+router.get('/miPerfil',productController.buscarPorGenero)
+router.get('/editarPerfil',productController.buscarPorGenero)
+router.get('/detalleUsuario/:id',productController.buscarPorGenero)
+router.get('/Login',productController.buscarPorGenero)
+router.get('/register',productController.buscarPorGenero)
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
 
+*/
 module.exports = router;
