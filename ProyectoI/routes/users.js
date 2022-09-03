@@ -1,12 +1,12 @@
+const usersController = require('../controllers/usersController')
+
 var express = require('express');
 var router = express.Router();
-/*
-router.get('/miPerfil',productController.buscarPorGenero)
-router.get('/editarPerfil',productController.buscarPorGenero)
-router.get('/detalleUsuario/:id',productController.buscarPorGenero)
-router.get('/Login',productController.buscarPorGenero)
-router.get('/register',productController.buscarPorGenero)
 
+router.get('/miPerfil',usersController.miPerfil)
+router.get('/editarPerfil',usersController.editarPerfil)
+router.get('/detalleUsuario/:id',usersController.detalleUsuario)
+router.get('/Login',usersController.login)
+router.get('/register',usersController.register)
 
-*/
 module.exports = router;
