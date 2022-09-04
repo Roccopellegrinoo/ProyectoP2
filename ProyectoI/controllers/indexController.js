@@ -1,12 +1,12 @@
+const data = require('../data/index')
 const indexController = {
 home: function(req, res) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { data: data });
   },
 
 search: function(req, res) {
     res.render('resultadoBusqueda', { title: 'Express' });
-  },
-
+  }
 
 
 

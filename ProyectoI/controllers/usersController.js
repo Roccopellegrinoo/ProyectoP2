@@ -1,22 +1,22 @@
 const usersController = {
     miPerfil: function(req, res) {
-        res.render('agregarPost', { title: 'Express' });
+        res.render('miPerfil', {  });
       },
     
    editarPerfil: function(req, res) {
-        res.render('detallePost', { title: 'Express' });
+        res.render('editarPerfil', {  });
       },
     
       detalleUsuario: function(req, res) {
-        res.render('detallePost', { title: 'Express' });
+        res.render('detalleUsuario', {  });
       },
     
       login: function(req, res) {
-        res.render('detallePost', { title: 'Express' });
+        res.render('login', {  });
       },
     
      register: function(req, res) {
-        res.render('detallePost', { title: 'Express' });
+        res.render('registracion', {  });
       },
     }
     

@@ -8,7 +8,16 @@
     <main>
         <section class="center main-content">
         <h1>Regsitrate</h1>
-        <p>Crear el formulario para registrar un nuevo usuario.</p>
+      <form action="/users/miPerfil" method="get">
+        <input type="email" name="mail" placeholder="mail" id="">
+        <input type="password" name="password" placeholder="contraseña" id="">
+        <input type="file" name="foto" placeholder="foto" id="">
+        <input type="date" name="fecha" placeholder="fecha de nacimiento" id="">
+        <input type="number" maxlength="9" name="dni" placeholder="dni" id="">
+        <button type="submit">Regsitrate</button>
+        
+
+      </form>
         </section>
     </main>
 
