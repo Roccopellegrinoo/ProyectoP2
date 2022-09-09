@@ -16,7 +16,8 @@
                     </h4>
                 </div>
                 <div class="post-body">
-                    <a href="detallePost.html">
+                    <% let url = `/posts/detallePost/${i}` %> 
+                    <a href='<%= url %> '>
                         <img src="<%= data.posteos[i].foto %> " alt="">
                         <p><%= data.posteos[i].texto %> </p>
                     </a>
@@ -33,14 +34,14 @@
                     <h4>Comentarios</h4>
                     <ul>
                         <li>
-                            <a href="detalleUsuario.html">Usuario</a>
+                            <a href="/users/detalleUsuario/0">Usuario</a>
                             <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
                         </li>
                         <li>
-                            <a href="detalleUsuario.html">Usuario</a>
+                            <a href="/users/detalleUsuario/1">Usuario</a>
                             <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
                         </li>
-                        <a href="detallePost.html">Ver más...</a>
+                        <a hrefs">Ver más...</a>
                     </ul>
                 </div>
             </article>
