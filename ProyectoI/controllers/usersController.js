@@ -1,10 +1,11 @@
+const data = require('../data/index')
 const usersController = {
     miPerfil: function(req, res) {
-        res.render('miPerfil', {  });
+        res.render('miPerfil', { data:data });
       },
     
    editarPerfil: function(req, res) {
-        res.render('editarPerfil', {  });
+        res.render('editarPerfil', { data:data });
       },
     
       detalleUsuario: function(req, res) {
