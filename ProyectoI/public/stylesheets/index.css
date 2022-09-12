@@ -19,7 +19,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color:#777
+    color:rgb(233, 228, 228)
 }
 /* navigation */
 header {
@@ -66,6 +66,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 .menu li {
     margin: 0 8px;
@@ -118,6 +119,10 @@ main {
     padding: 1px;
     border: 2px solid chocolate;
 }
+
+.info-usuario .img-perfil {
+    width: 20%;
+}
 .post-reacciones {
     display: flex;
     flex-direction: row;
@@ -148,6 +153,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 .main-footer {
     position: fixed;
@@ -275,7 +281,7 @@ main {
     background-color: mediumseagreen;
     border: 1px solid mediumaquamarine;
     border-radius: 5px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.666);
     margin-left: 20px;
 }
 .follow:hover{
@@ -300,6 +306,6 @@ body {
   }
   
   a {
-    color: #00B7FF;
+    color: #dfd348;
   }
   
