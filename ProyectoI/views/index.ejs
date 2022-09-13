@@ -7,19 +7,19 @@
 
     <main>
         <section class="center main-content">
-            <% for (let i=0; i<data.posteos.length; i++){  %> 
+            <% for (let i=0; i<data.length; i++){  %> 
             <article class="post">
                 <div class="info-usuario ">
-                    <img class="img-perfil" src="<%=data.usuarios[i].foto %> " alt="">
+                    <img class="img-perfil" src="<%=data[i].posteo %> " alt="">
                     <h4>
-                        <a href="/users/detalleUsuario/0 "><%=data.usuarios[i].username %> </a>
+                        <a href="/users/detalleUsuario/0 "><%=data[i].username %> </a>
                     </h4>
                 </div>
                 <div class="post-body">
                     <% let url = `/posts/detallePost/${i}` %> 
-                    <a href='<%= url %> '>
-                        <img src="<%= data.posteos[i].foto %> " alt="">
-                        <p><%= data.posteos[i].texto %> </p>
+                    <a href='/post/detalle/<%= data[i].id_posteo%> '>
+                        <img src="<%= data[i].foto %> " alt="">
+                        <p><%= data[i].texto %> </p>
                     </a>
                 </div>
                 <ul class="post-reacciones">
@@ -34,14 +34,14 @@
                     <h4>Comentarios</h4>
                     <ul>
                         <li>
-                            <a href="/users/detalleUsuario/0"><%= data.usuarios[i].username %> </a>
-                            <span><%= data.comentarios[i].texto %> </span>
+                            <a href="/users/detalleUsuario/1"><%= data[i].comentarios[0].nombre %></a>
+                            <span><%= data[i].comentarios[0].texto  %> </span>
                         </li>
                         <li>
-                            <a href="/users/detalleUsuario/1"><%= data.usuarios[i].username %></a>
-                            <span><%= data.comentarios[i].texto  %> </span>
+                            <a href="/users/detalleUsuario/1"><%= data[i].comentarios[1].nombre %></a>
+                            <span><%= data[i].comentarios[1].texto  %> </span>
                         </li>
-                        <a hrefs">Ver más...</a>
+                        <a href="/">Ver más...</a>
                     </ul>
                 </div>
             </article>

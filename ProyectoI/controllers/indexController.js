@@ -1,7 +1,7 @@
 const data = require('../data/index')
 const indexController = {
 home: function(req, res) {
-    res.render('index', { data: data });
+    res.render('index', { data: data.posteos });
   },
 
 search: function(req, res) {
