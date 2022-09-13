@@ -4,6 +4,7 @@ usuarios:[{
    nombre:'Roberto', 
    username:'AnteojosRobert',
    foto: '/images/usuarios/usuario_roberto.jpeg',
+   posteo: '/images/posteos/posteo1.jpeg',
    mail: 'roberto@gmail.com',
    contrasenia: 'contrasenia12',
    nacimiento: '2002-11-05',
@@ -55,7 +56,7 @@ posteos:[
     {
     id_posteo : 1,
     foto:'/images/posteos/posteo1.jpeg',
-    texto:'Modelo verano',
+    texto:'Modelo verano para playa',
     username: 'AnteojosRoberto',
     comentarios :[
         {
@@ -71,8 +72,8 @@ posteos:[
     ]
     },{
         id_posteo : 2,
-        foto:'/imagenes/posteos/posteos2.jpeg',
-        texto:'Modelo verano',
+        foto:'/images/posteos/posteo2.jpeg',
+        texto:'Modelo verano nuevos',
         username: 'La Betty',
         comentarios :[
             {
@@ -89,7 +90,7 @@ posteos:[
         },{
             id_posteo : 3,
             foto:'/images/posteos/posteo3.jpeg',
-            texto:'Modelo verano',
+            texto:'Modelo verano tendencia',
             username: 'Juanitaok',
             comentarios :[
                 {
@@ -103,7 +104,42 @@ posteos:[
                     texto : 'Divinas!'
                 }
             ]
-            },],
+            },
+            {
+                id_posteo : 4,
+                foto:'/images/posteos/posteo4.jpeg',
+                texto:'Partido con amigos',
+                username: 'El Petter',
+                comentarios :[
+                    {
+                        id_usuario : 1,
+                        nombre : 'Lucas',
+                        texto : 'Que buen partido'
+                    },
+                    {
+                        id_usuario : 2,
+                        nombre : 'Dolores',
+                        texto : 'que divertido!'
+                    }
+                ]
+                },{
+                    id_posteo : 4,
+                    foto:'/images/posteos/posteo5.jpeg',
+                    texto:'Paseando',
+                    username: 'MartitaEnMoto',
+                    comentarios :[
+                        {
+                            id_usuario : 1,
+                            nombre : 'Mercedes',
+                            texto : 'Que linda te queda esa bufanda'
+                        },
+                        {
+                            id_usuario : 2,
+                            nombre : 'Agustin',
+                            texto : 'que buena moto!'
+                        }
+                    ]
+                    }],
 comentarios : [
     {id_comment :1,
         texto: "Buenardos esos lentes"

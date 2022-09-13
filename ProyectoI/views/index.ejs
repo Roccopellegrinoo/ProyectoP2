@@ -10,15 +10,15 @@
             <% for (let i=0; i<data.length; i++){  %> 
             <article class="post">
                 <div class="info-usuario ">
-                    <img class="img-perfil" src="<%=data[i].posteo %> " alt="">
+                    <img class="img-perfil" src="<%=data.usuarios[i].foto %> " alt="">
                     <h4>
-                        <a href="/users/detalleUsuario/0 "><%=data[i].username %> </a>
+                        <a href="/users/detalleUsuario/0 "><%=data.usuarios[i].username %> </a>
                     </h4>
                 </div>
                 <div class="post-body">
                     <% let url = `/posts/detallePost/${i}` %> 
-                    <a href='/post/detalle/<%= data[i].id_posteo%> '>
-                        <img src="<%= data[i].foto %> " alt="">
+                    <a href='/post/detalle/<%= data.posteos[i].foto%> '>
+                        <img src="<%= data.posteos[i].foto%> " alt="">
                         <p><%= data[i].texto %> </p>
                     </a>
                 </div>
