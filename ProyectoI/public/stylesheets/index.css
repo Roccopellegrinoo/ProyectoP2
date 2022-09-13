@@ -112,6 +112,8 @@ main {
     flex-direction: row;
     justify-content:flex-start;
     align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    
 }
 .info-usuario img {
     margin-right: 10px;
@@ -246,6 +248,7 @@ main {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 .user-detail .info-usuario{
     justify-content: space-between;
@@ -275,6 +278,7 @@ main {
     margin-bottom: 30px;
     border-bottom: 1px solid #ddd;
     max-width: 500px;
+    
 }
 .follow {
     padding: 3px 20px 7px;
@@ -283,6 +287,7 @@ main {
     border-radius: 5px;
     color: rgba(255, 255, 255, 0.666);
     margin-left: 20px;
+    
 }
 .follow:hover{
     cursor: pointer;
