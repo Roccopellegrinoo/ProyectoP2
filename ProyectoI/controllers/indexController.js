@@ -1,6 +1,10 @@
 const data = require('../data/index')
 const indexController = {
 home: function(req, res) {
+  for (let i = 0; i < data.usuarios.length; i++) {
+    console.log (data.usuarios[i].foto)
+    
+  }
     res.render('index', { data: data.posteos });
   },
 
