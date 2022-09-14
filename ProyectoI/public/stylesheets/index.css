@@ -102,6 +102,9 @@ main {
 .post-body img {
     width: 100%;
 }
+.post-body p {
+    margin-left: 5%;
+}
 .info-usuario,
 .post-reacciones,
 .post-comentarios {
