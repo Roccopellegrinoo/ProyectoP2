@@ -5,7 +5,7 @@ home: function(req, res) {
     console.log (data.usuarios[i].foto)
     
   }
-    res.render('index', { data: data.posteos });
+    res.render('index', { info:data.usuarios,data: data.posteos });
   },
 
 search: function(req, res) {
