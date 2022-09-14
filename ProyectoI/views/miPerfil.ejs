@@ -9,15 +9,17 @@
     <main>
         <div class="user-detail container">
             <section class="top main-content">
+               
                 <img class="profile" src="<%=data.usuarios[0].foto %>" alt="">
                 <div class="info-usuario">
                     <p><%=data.usuarios[0].username%></p> 
                     <a class="follow" href="/users/editarPerfil"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
-                        <li>100 post</li>
-                        <li>200 seguidores</li>
-                        <li>300 seguidos</li>
+                        <li><%=data.usuarios[0].posteos %> posteos </li>
+                        <li><%= data.usuarios[0].seguidores %> seguidores</li>
+                        <li><%= data.usuarios[0].seguidos %> seguidos</li>
                     </ul>
+                    
                 </div>
             </section>
             <section class="bottom">

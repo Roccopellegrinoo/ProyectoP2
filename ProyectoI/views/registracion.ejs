@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/header') %> 
-    <main>
+  <body>
+    <%- include('./partials/header') %>
+      <main>
         <section class="center main-content">
-        <h1>Regsitrate</h1>
-      <form action="/users/miPerfil" method="">
-        <input type="email" name="mail" placeholder="mail" id="">
-        <input type="text" name="username" placeholder="username" id="">
-        <input type="password" name="password" placeholder="contraseña" id="">
-        <input type="file" name="foto" placeholder="foto" id="">
-        <input type="date" name="fecha" placeholder="fecha de nacimiento" id="">
-        <input type="number" maxlength="9" name="dni" placeholder="dni" id="">
-        <button type="submit">Regsitrate</button>
-        
+          <h1>Regsitrate</h1>
+          <form action="/users/login" method="">
+            <input type="email" name="mail" placeholder="mail" id="">
+            <input type="text" name="username" placeholder="username" id="">
+            <input type="password" name="password" placeholder="contraseña" id="">
+            <input type="file" name="foto" placeholder="foto" id="">
+            <input type="date" name="fecha" placeholder="fecha de nacimiento" id="">
+            <input type="number" maxlength="9" name="dni" placeholder="dni" id="">
+            <button type="submit">Regsitrate</button>
 
-      </form>
+
+          </form>
         </section>
-    </main>
+      </main>
 
-    <%- include('./partials/footer') %> 
+      <%- include('./partials/footer') %>
 
-</body>
+  </body>
 
 </html>

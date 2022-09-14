@@ -19,7 +19,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color:rgb(233, 228, 228)
+    color: red
+
 }
 /* navigation */
 header {
@@ -27,7 +28,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: gr
 }
 .main-nav {
     display: flex;
@@ -294,6 +295,7 @@ main {
     background-color: forestgreen;
 }
 .profile {
+    width: 200px;
     border-radius: 90%;
     border: 2px solid chocolate;
 }
