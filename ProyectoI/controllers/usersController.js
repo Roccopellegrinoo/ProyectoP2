@@ -5,7 +5,7 @@ const usersController = {
       },
     
    editarPerfil: function(req, res) {
-        res.render('editarPerfil', { data:data});
+        res.render('editarPerfil', { info:data.usuarios, indice:req.params.id});
       },
     
       detalleUsuario: function(req, res) {

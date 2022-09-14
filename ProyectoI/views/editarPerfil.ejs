@@ -11,13 +11,13 @@
         <section class="center main-content">
         <h1>Editar perfil</h1>
         <form action="/users/miPerfil" method="">
-            <input type="email" name="mail" placeholder="mail" id="" value="<%= data.usuarios[0].mail %> ">
-            <input type="text" name="username" placeholder="username" id="" value="<%= data.usuarios[0].username %> ">
-            <input type="password" name="password" placeholder="contraseña" id="" value="<%= data.usuarios[0].contrasenia %> ">
+            <input type="email" name="mail" placeholder="mail" id="" value="<%= info[indice].mail %> ">
+            <input type="text" name="username" placeholder="username" id="" value="<%= info[indice].username %> ">
+            <input type="password" name="password" placeholder="contraseña" id="" value="<%= info[indice].contrasenia %> ">
             <input type="file" name="foto" placeholder="foto" id=""> 
-            <input type="date" name="fecha" placeholder="fecha de nacimiento" id="" value="<%= data.usuarios[0].nacimiento %> " >
-            <input type="text" maxlength="9" name="dni" placeholder="dni" id="" value="<%= data.usuarios[0].DNI %> " >
-            <button type="submit">Regsitrate</button>
+            <input type="date" name="fecha" placeholder="fecha de nacimiento" id="" value="<%= info[indice].nacimiento %> " >
+            <input type="text" maxlength="9" name="dni" placeholder="dni" id="" value="<%= info[indice].DNI %> " >
+            <button type="submit">Registrate</button>
             
     
           </form>
