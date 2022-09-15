@@ -8,16 +8,10 @@ home: function(req, res) {
 search: function(req, res) {
   let texto = req.query.texto;
   let info = data.posteos;
-  let post= {}
+ 
+
   
-  for (let i = 0; i < info.length; i++) {
-    if (info[i].texto == texto) {
-      post = info[i]
-   
-    }
-    
-  }
-    res.render('resultadoBusqueda', { posteo: post });
+    res.render('resultadoBusqueda', { posteo: info});
   }
 
 
