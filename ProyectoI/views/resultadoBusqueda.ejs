@@ -10,6 +10,44 @@
         <section class="center main-content">
         <h1>Resultados de búsqueda.</h1>
         <p>Construir la vista.</p>
+        <%= posteo.texto %> 
+        <article class="post">
+            <div class="info-usuario ">
+                <img class="img-perfil" src="" alt="">
+                <h4>
+                    <a href="/users/detalleUsuario/<%=posteo.id_usuario%>  "><%= %> </a>
+                </h4>
+            </div>
+            <div class="post-body">
+                <% let url = `/posts/detallePost/${i}` %> 
+                <a href='/post/detalle/<%= posteo.id_posteo%> '>
+                    <img src="<%= posteo.foto%> " alt="">
+                    <p><%= posteo.texto %> </p>
+                </a>
+            </div>
+            <ul class="post-reacciones">
+                <li>
+                    <i class="fa-regular fa-heart"></i>
+                </li>
+                <li>
+                    <i class="fa-regular fa-comment"></i>
+                </li>
+            </ul>
+            <div class="post-comentarios">
+                <h4>Comentarios</h4>
+                <ul>
+                    <li>
+                        <a href="/users/detalleUsuario/1"><%= posteo.comentarios[0].nombre %></a>
+                        <span><%= posteo.comentarios[0].texto  %> </span>
+                    </li>
+                    <li>
+                        <a href="/users/detalleUsuario/1"><%= posteo.comentarios[1].nombre %></a>
+                        <span><%= posteo.comentarios[1].texto  %> </span>
+                    </li>
+                    <a href="/">Ver más...</a>
+                </ul>
+            </div>
+        </article>
         </section>
     </main>
     <%- include('./partials/footer') %> 

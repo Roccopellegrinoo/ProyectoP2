@@ -1,15 +1,23 @@
 const data = require('../data/index')
 const indexController = {
 home: function(req, res) {
-  for (let i = 0; i < data.usuarios.length; i++) {
-    console.log (data.usuarios[i].foto)
-    
-  }
-    res.render('index', { info:data.usuarios,data: data.posteos });
+
+    res.render('index', { info:data.usuarios, data: data.posteos });
   },
 
 search: function(req, res) {
-    res.render('resultadoBusqueda', { title: 'Express' });
+  let texto = req.query.texto;
+  let info = data.posteos;
+  let post= {}
+  
+  for (let i = 0; i < info.length; i++) {
+    if (info[i].texto == texto) {
+      post = info[i]
+   
+    }
+    
+  }
+    res.render('resultadoBusqueda', { posteo: post });
   }
 
 
