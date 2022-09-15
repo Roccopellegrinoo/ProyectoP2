@@ -14,4 +14,4 @@ const postsController = {
     
     }
     
-    module.exports = postsController
+    module.exports = postsController;
