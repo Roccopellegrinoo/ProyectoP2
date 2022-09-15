@@ -10,14 +10,14 @@
         <div class="user-detail container">
             <section class="top main-content">
                
-                <img class="profile" src="<%=data.usuarios[0].foto %>" alt="">
+                <img class="profile" src="<%=data.usuarios[indice].foto %>" alt="">
                 <div class="info-usuario">
-                    <p><%=data.usuarios[0].username%></p> 
+                    <p><%=data.usuarios[indice].username%></p> 
                     <a class="follow" href="/users/editarPerfil"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
-                        <li><%=data.usuarios[0].posteos %> posteos </li>
-                        <li><%= data.usuarios[0].seguidores %> seguidores</li>
-                        <li><%= data.usuarios[0].seguidos %> seguidos</li>
+                        <li><%=data.usuarios[indice].posteos %> posteos </li>
+                        <li><%= data.usuarios[indice].seguidores %> seguidores</li>
+                        <li><%= data.usuarios[indice].seguidos %> seguidos</li>
                     </ul>
                     
                 </div>

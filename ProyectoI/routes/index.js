@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get('/',indexController.home);
 
-router.get('/resultadoDeBusqueda/:id',indexController.search);
+router.get('/resultadoDeBusqueda',indexController.search);
 
 
 

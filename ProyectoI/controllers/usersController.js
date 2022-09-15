@@ -1,7 +1,7 @@
 const data = require('../data/index')
 const usersController = {
     miPerfil: function(req, res) {
-        res.render('miPerfil', { data:data});
+        res.render('miPerfil', { data:data, indice:req.params.id} );
       },
     
    editarPerfil: function(req, res) {

@@ -69,6 +69,7 @@ posteos: 0,
 posteos:[
     {
     id_posteo : 1,
+    id_usuario:1,
     foto:'/images/posteos/posteo1.jpeg',
     texto:'Modelo verano para playa',
     username: 'AnteojosRoberto',
@@ -86,6 +87,7 @@ posteos:[
     ]
     },{
         id_posteo : 2,
+        id_usuario:2,
         foto:'/images/posteos/posteo2.jpeg',
         texto:'Modelo verano nuevos',
         username: 'La Betty',
@@ -103,6 +105,7 @@ posteos:[
         ]
         },{
             id_posteo : 3,
+            id_usuario:3,
             foto:'/images/posteos/posteo3.jpeg',
             texto:'Modelo verano tendencia',
             username: 'Juanitaok',
@@ -121,6 +124,7 @@ posteos:[
             },
             {
                 id_posteo : 4,
+                id_usuario:4,
                 foto:'/images/posteos/posteo4.jpeg',
                 texto:'Partido con amigos',
                 username: 'El Petter',
@@ -137,7 +141,8 @@ posteos:[
                     }
                 ]
                 },{
-                    id_posteo : 4,
+                    id_posteo : 5,
+                    id_usuario:5,
                     foto:'/images/posteos/posteo5.jpeg',
                     texto:'Paseando',
                     username: 'MartitaEnMoto',
