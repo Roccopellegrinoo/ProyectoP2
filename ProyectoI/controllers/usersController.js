@@ -11,9 +11,9 @@ const usersController = {
     //// REVISAR DETTALLE
       detalleUsuario: function (req,res) {
         let id = req.params.id;
-        let resultado = data.detalleUsuario(id);
-        console.log(resultado); 
-        return res.render('detalleUsuario', {data:usuarios.posteos});
+        let posteos = data.detalleUsuario(id);
+        console.log(posteos); 
+        res.render('detalleUsuario', {posteos:posteos,data:data,indice:id});
        
 
     },
@@ -27,3 +27,4 @@ const usersController = {
     }
     
     module.exports = usersController
+

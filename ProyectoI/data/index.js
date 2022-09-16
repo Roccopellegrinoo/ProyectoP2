@@ -179,10 +179,10 @@ comentarios : [
 ],
   
 detalleUsuario: function(id){ 
-    let resultado = {};
+    let resultado = [];
     for (let i=0; i<data.posteos.length; i++) {
         if (id==data.posteos[i].id_usuario ) {
-                resultado=data.posteos[i]
+                resultado.push(data.posteos[i])
             
         }     
     }

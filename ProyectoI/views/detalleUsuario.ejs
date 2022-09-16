@@ -9,37 +9,28 @@
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="" alt="">
+                <img class="profile" src="<%=data.usuarios[indice].foto%>" alt="">
                 <div class="info-usuario">
-                    <p><%= usuario.username %></p> 
+                    <p><%= data.usuarios[indice].username %></p> 
                     <a class="follow" href="">seguir</a>
                     <ul class="meta">
-                        <li>Post: <%= usuarios.posteos %></li>
-                        <li>Followers: <%= usuarios.seguidores%></li>
-                        <li>Follow: <%= usuarios.seguidos%></li>
+                        <li>Post: <%=data.usuarios[indice].posteos %></li>
+                        <li>Followers: <%= data.usuarios[indice].seguidores%></li>
+                        <li>Follow: <%= data.usuarios[indice].seguidos%></li>
                     </ul>
                 </div>
             </section>
           <section class="bottom">
-            
+              /// lo que rompe es aca
+            <%for ( i=0, i < posteos.length, i++ ) { %>
                 <article class="post">
-                    <a href="/posts/detallePost3<%= posteos.id_usuario% %> ">
-                        <img src="<%= posteos.foto%>" alt="">
+                    <a href="/posts/detallePost3/<% posteos[i].id_posteo%> ">
+                        <img src="<%posteos[i].foto%>" alt="">
                     </a>
                 </article>
-            
+           <% } %>
             </section>
-            <section class="bottom">
-    
-                    <article class="post">
-                        <img src="<%= posteos.foto%>" alt="">
-                        <section class="content">
-                            <a class="user" href="/posts/detallePost/"><%= posteos[i].id_usuario% %> </a>
-                            
-                        </section>
-                    </article>
-                   
-            </section>
+           
         </div>
     </main>
 
