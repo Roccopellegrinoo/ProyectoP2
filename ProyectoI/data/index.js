@@ -22,9 +22,9 @@ mail: 'Labetty@gmail.com',
 contrasenia: 'contrasenia13',
 nacimiento: '1995-11-05',
 DNI: '41440334',
-posteos: 0,
-   seguidores : 0,
-   seguidos: 0,
+posteos: 3,
+   seguidores : 150,
+   seguidos: 30,
 
 }, 
 {id: 3,
@@ -35,9 +35,9 @@ mail: 'Juanitaok@gmail.com',
 contrasenia: 'contrasenia14',
 nacimiento: '1991-09-006',
 DNI: '40242000',
-posteos: 0,
-   seguidores : 0,
-   seguidos: 0,
+posteos: 4,
+   seguidores : 114,
+   seguidos: 150,
 },
 {id:4,
  
@@ -47,9 +47,9 @@ mail: 'PedroVelazco@gmail.com',
 contrasenia: 'contrasenia123',
 nacimiento: '1991-09-06',
 DNI: '40242000',
-posteos: 0,
-   seguidores : 0,
-   seguidos: 0,
+posteos: 30,
+   seguidores :100,
+   seguidos: 100,
 },
 {id: 5,
  
@@ -59,9 +59,9 @@ mail: 'MarthaLamothe@gmail.com',
 contrasenia: 'contrasenia34',
 nacimiento: '1990-10-07',
 DNI: '434568574',
-posteos: 0,
-   seguidores : 0,
-   seguidos: 0,
+posteos: 20,
+   seguidores : 130,
+   seguidos: 49,
 }
 ],
 
@@ -176,10 +176,32 @@ comentarios : [
         texto: "hay en color negros?"
     
     },
+],
+  
+detalleUsuario: function(id){ 
+    let resultado = {};
+    for (let i=0; i<data.posteos.length; i++) {
+        if (id==data.posteos[i].id_usuario ) {
+                resultado=data.posteos[i]
+            
+        }     
+    }
 
-]
+    return resultado
+
+
+},
+detallePosteo: function(id){
+    let resultado = {};
+    for (let i = 0; i < data.posteos.length; i++) {
+        if(id==data.posteos[i].id){
+            resultado = data.posteos[i]
+        }
+         
+    }
+    return resultado
+},
+
 }
 
-
-
-module.exports = data
+module.exports = data;

@@ -12,12 +12,12 @@
                 <div class="info-usuario ">
                     <img class="img-perfil" src="<%=info[i].foto%> " alt="">
                     <h4>
-                        <a href="/users/detalleUsuario/<%=data[i].id_usuario%>  "><%=info[i].username %> </a>
+                        <a href='/users/detalleUsuario/<%=data[i].id_usuario%>'><%=info[i].username %> </a>
                     </h4>
                 </div>
                 <div class="post-body">
                     <% let url = `/posts/detallePost/${i}` %> 
-                    <a href='/post/detalle/<%= data[i].id_posteo%> '>
+                    <a href='/post/detallePost/<%= data[i].id_posteo%> '>
                         <img src="<%= data[i].foto%> " alt="">
                         <p><%= data[i].texto %> </p>
                     </a>
