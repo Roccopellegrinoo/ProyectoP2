@@ -40,7 +40,7 @@ header {
     padding: 10px 10px;
     border-bottom: 1px solid #ddd;
 }
-.main-nav  .nav-right a {
+.navbar-right a {
 color:rgb(22, 157, 230);
 }
 .logo{
@@ -73,9 +73,11 @@ color:rgb(22, 157, 230);
     justify-content: space-between;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    color:rgb(22, 157, 230);
 }
 .menu li {
     margin: 0 8px;
+    
 }
 .menu i {
     font-size: 25px;
@@ -332,13 +334,11 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   }
   
-  a {
-    color: #dfd348;
-  }
+ 
   
   #registracion h1 {
     background-color: #858585;
-    color: aquamarine;
+    color: rgb(22, 157, 230);
 }
 
 #registracion input {
@@ -350,7 +350,7 @@ body {
 
 #registracion #foto {
     width: 100%;
-    background-color: #dfd348;
+    background-color: rgb(22, 157, 230);
 }
 
 #registracion #submit {
