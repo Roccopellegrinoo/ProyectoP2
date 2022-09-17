@@ -26,7 +26,7 @@
                 <% for (let i=0; i<posteos.length; i++){  %> 
                     <%if(usuario.id == posteos[i].id_usuario){ %>   
                 <article class="post">
-                    <% let url= `/posts/detallePost/${i}`%> 
+                    <% let url= `/posts/detallePost/${posteos[i].id_posteo}`%> 
                     <a href="<%= url%>">
                         <img src="<%=posteos[i].foto %>" alt="">
                         <p><%=posteos[i].texto%></p>

@@ -4,6 +4,6 @@ const router = express.Router();
 
 
 router.get('/agregarPost',postsController.agregarPost);
-router.get('/detallePost/:Id',postsController.detallePost);
+router.get('/detallePost/:id',postsController.detallePost);
 
 module.exports = router;

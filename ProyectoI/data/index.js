@@ -71,6 +71,7 @@ posteos:[
     id_posteo : 1,
     id_usuario:1,
     foto:'/images/posteos/posteo1.jpeg',
+    fotoPerfil: '/images/usuarios/usuario_roberto.jpeg',
     texto:'Modelo verano para playa',
     username: 'AnteojosRoberto',
     comentarios :[
@@ -85,10 +86,32 @@ posteos:[
             texto : 'Muy linda'
         }
     ]
-    },{
+    },
+    {
+        id_posteo : 1,
+        id_usuario:1,
+        foto:'/images/posteos/posteo12.jpeg',
+        fotoPerfil: '/images/usuarios/usuario_roberto.jpeg',
+        texto:'Modelo verano para playa',
+        username: 'AnteojosRoberto',
+        comentarios :[
+            {
+                id_usuario : 1,
+                nombre : 'Juana',
+                texto : 'Muy buena foto'
+            },
+            {
+                id_usuario : 2,
+                nombre : 'Betty',
+                texto : 'Muy linda'
+            }
+        ]
+        },
+    {
         id_posteo : 2,
         id_usuario:2,
         foto:'/images/posteos/posteo2.jpeg',
+        fotoPerfil:'/images/usuarios/usuario_betty.jpeg',
         texto:'Modelo verano nuevos',
         username: 'La Betty',
         comentarios :[
@@ -107,6 +130,7 @@ posteos:[
             id_posteo : 3,
             id_usuario:3,
             foto:'/images/posteos/posteo3.jpeg',
+            fotoPerfil:'/images/usuarios/usuario_juani.jpeg',
             texto:'Modelo verano tendencia',
             username: 'Juanitaok',
             comentarios :[
@@ -126,6 +150,7 @@ posteos:[
                 id_posteo : 4,
                 id_usuario:4,
                 foto:'/images/posteos/posteo4.jpeg',
+                fotoPerfil:'/images/usuarios/usuario_elpetter.jpeg',
                 texto:'Partido con amigos',
                 username: 'El Petter',
                 comentarios :[
@@ -144,6 +169,7 @@ posteos:[
                     id_posteo : 5,
                     id_usuario:5,
                     foto:'/images/posteos/posteo5.jpeg',
+                    fotoPerfil:'/images/usuarios/usuario_martita.jpeg',
                     texto:'Paseando',
                     username: 'MartitaEnMoto',
                     comentarios :[

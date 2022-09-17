@@ -36,15 +36,16 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+background-color: white;
     padding: 10px 10px;
     border-bottom: 1px solid #ddd;
 }
-
+.main-nav .navbar-right a{color: aqua;}
 .logo{
     font-size: 18px;
 }
 .search {
+    border: 1px solid aqua;
     background-color: #EBEDF0;
     padding: 10px;
     border-radius: 10px;
@@ -119,11 +120,17 @@ main {
     font-family: 'Source Sans Pro', sans-serif;
     
 }
+.info-usuario a {
+    color: aqua;
+    font-size: 17px;
+}
 .info-usuario img {
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
     border-radius: 90%;
     padding: 1px;
-    border: 2px solid chocolate;
+    border: 2px solid aqua;
 }
 
 .info-usuario .img-perfil {
@@ -135,6 +142,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    color: aqua;
 }
 .post-reacciones li{
     margin-right: 10px;
@@ -148,6 +156,7 @@ main {
     color: #000;
 }
 .post-comentarios h4 {
+    color: aqua;
     margin: 0 0 10px 0;
 }
 
@@ -320,4 +329,26 @@ body {
   a {
     color: #dfd348;
   }
-  
+  #registracion h1 {
+    background-color: #858585;
+    color: aquamarine;
+}
+
+#registracion input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#registracion #foto {
+    width: 100%;
+    background-color: #dfd348;
+}
+
+#registracion #submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
