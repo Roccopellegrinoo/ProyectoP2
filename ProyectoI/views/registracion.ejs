@@ -7,17 +7,15 @@
     <%- include('./partials/header') %>
       <main>
         <section class="center main-content">
-          <h1>Registrate</h1>
-          <form action="/users/login" method="">
-            <input type="email" name="mail" placeholder="mail" >
-            <input type="text" name="username" placeholder="username" >
-            <input type="password" name="password" placeholder="contraseña" >
-            <input type="file" name="foto" placeholder="foto" >
-            <input type="date" name="fecha" placeholder="fecha de nacimiento" >
-            <input type="number" maxlength="9" name="dni" placeholder="dni" >
-            <button type="submit">Regsitrate</button>
-
-
+          <form id="registracion" action="/users/login" method="">
+            <h1>Registrate</h1>
+            <input type="email" name="mail" placeholder="mail" > <br>
+            <input type="text" name="username" placeholder="username" > <br>
+            <input type="password" name="password" placeholder="contraseña" > <br>
+            <input type="date" name="fecha" placeholder="fecha de nacimiento" > <br>
+            <input type="number" maxlength="9" name="dni" placeholder="dni" > <br>
+            <input id="foto" type="file" name="foto" placeholder="foto" > <br>
+            <button id="submit" type="submit">Regsitrate</button>
           </form>
         </section>
       </main>

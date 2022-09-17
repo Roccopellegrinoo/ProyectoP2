@@ -148,6 +148,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    color:rgb(22, 157, 230);
 }
 .post-reacciones li{
     margin-right: 10px;
@@ -162,6 +163,7 @@ main {
 }
 .post-comentarios h4 {
     margin: 0 0 10px 0;
+    color: rgb(22, 157, 230);
 }
 
 /* Footer  */
@@ -334,3 +336,26 @@ body {
     color: #dfd348;
   }
   
+  #registracion h1 {
+    background-color: #858585;
+    color: aquamarine;
+}
+
+#registracion input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#registracion #foto {
+    width: 100%;
+    background-color: #dfd348;
+}
+
+#registracion #submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
