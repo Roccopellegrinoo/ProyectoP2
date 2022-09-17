@@ -10,27 +10,29 @@
         <div class="user-detail container">
             <section class="top main-content">
                
-                <img class="profile" src="<%=data.usuarios[indice].foto %>" alt="">
+                <img class="profile" src="<%=usuario.foto%>" alt="">
                 <div class="info-usuario">
-                    <p><%=data.usuarios[indice].username%></p> 
+                    <p><%=usuario.username%></p> 
                     <a class="follow" href="/users/editarPerfil/0"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
-                        <li><%=data.usuarios[indice].posteos %> posteos </li>
-                        <li><%= data.usuarios[indice].seguidores %> seguidores</li>
-                        <li><%= data.usuarios[indice].seguidos %> seguidos</li>
+                        <li><%=usuario.posteos %> posteos </li>
+                        <li><%=usuario.seguidores %> seguidores</li>
+                        <li><%=usuario.seguidos %> seguidos</li>
                     </ul>
                     
                 </div>
             </section>
             <section class="bottom">
-                <% for (let i=0; i<data.posteos.length; i++){  %> 
+                <% for (let i=0; i<posteos.length; i++){  %> 
+                    <%if(usuario.id == posteos[i].id_usuario){ %>   
                 <article class="post">
                     <% let url= `/posts/detallePost/${i}`%> 
                     <a href="<%= url%>">
-                        <img src="<%=data.posteos[i].foto %>" alt="">
-                        <p><%=data.posteos[i].texto%></p>
+                        <img src="<%=posteos[i].foto %>" alt="">
+                        <p><%=posteos[i].texto%></p>
                     </a>
                 </article>
+           <% } %>
            <% } %>
             </section>
         </div>

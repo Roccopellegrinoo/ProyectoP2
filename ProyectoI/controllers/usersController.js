@@ -2,7 +2,9 @@ const { usuarios } = require('../data/index');
 const data = require('../data/index')
 const usersController = {
     miPerfil: function(req, res) {
-        res.render('miPerfil', { data:data, indice:req.params.id} );
+      let id = req.params.id;
+      let usuario = data.usuarios.find(usuario=>usuario.id==id);
+        res.render('miPerfil', { usuario:usuario,posteos:data.posteos} );
       },
     
    editarPerfil: function(req, res) {
@@ -11,11 +13,10 @@ const usersController = {
     //// REVISAR DETTALLE
       detalleUsuario: function (req,res) {
         let id = req.params.id;
-        let posteos = data.detalleUsuario(id);
-        console.log(posteos); 
-        res.render('detalleUsuario', {posteos:posteos,data:data,indice:id});
-       
-
+        let usuario = data.usuarios.find(usuario=>usuario.id==id);
+        console.log(data.posteos);
+        res.render('detalleUsuario', {usuario,posteos:data.posteos});
+  
     },
       login: function(req, res) {
         res.render('login', {  });
