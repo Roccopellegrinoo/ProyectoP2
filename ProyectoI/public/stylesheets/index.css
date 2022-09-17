@@ -36,20 +36,23 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-background-color: white;
+    background-color: white;
     padding: 10px 10px;
     border-bottom: 1px solid #ddd;
 }
-.main-nav .navbar-right a{color: aqua;}
+.navbar-right a {
+color:rgb(22, 157, 230);
+}
 .logo{
     font-size: 18px;
+  
 }
 .search {
-    border: 1px solid aqua;
     background-color: #EBEDF0;
     padding: 10px;
     border-radius: 10px;
     width: 300px;
+    border: 1px solid rgb(22, 157, 230);
 }
 .search input {
     border: none;
@@ -61,6 +64,7 @@ background-color: white;
 }
 .search i {
     color: #888;
+    
 }
 .menu{
     display: flex;
@@ -69,9 +73,11 @@ background-color: white;
     justify-content: space-between;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    color:rgb(22, 157, 230);
 }
 .menu li {
     margin: 0 8px;
+    
 }
 .menu i {
     font-size: 25px;
@@ -120,9 +126,13 @@ main {
     font-family: 'Source Sans Pro', sans-serif;
     
 }
-.info-usuario a {
-    color: aqua;
+
+.info-usuario a{
+    color: rgb(22, 157, 230);
+    font-weight: bolder;
     font-size: 17px;
+
+
 }
 .info-usuario img {
     width: 50px;
@@ -130,7 +140,7 @@ main {
     margin-right: 10px;
     border-radius: 90%;
     padding: 1px;
-    border: 2px solid aqua;
+    border: 2px solid rgb(22, 157, 230);
 }
 
 .info-usuario .img-perfil {
@@ -142,7 +152,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    color: aqua;
+    color:rgb(22, 157, 230);
 }
 .post-reacciones li{
     margin-right: 10px;
@@ -156,8 +166,8 @@ main {
     color: #000;
 }
 .post-comentarios h4 {
-    color: aqua;
     margin: 0 0 10px 0;
+    color: rgb(22, 157, 230);
 }
 
 /* Footer  */
@@ -326,12 +336,11 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   }
   
-  a {
-    color: #dfd348;
-  }
+ 
+  
   #registracion h1 {
     background-color: #858585;
-    color: aquamarine;
+    color: rgb(22, 157, 230);
 }
 
 #registracion input {
@@ -343,7 +352,7 @@ body {
 
 #registracion #foto {
     width: 100%;
-    background-color: #dfd348;
+    background-color: rgb(22, 157, 230);
 }
 
 #registracion #submit {
