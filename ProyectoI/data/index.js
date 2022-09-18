@@ -84,7 +84,19 @@ posteos:[
             id_usuario : 2,
             nombre : 'Betty',
             texto : 'Muy linda'
+        },
+        {
+            id_usuario : 3,
+            nombre : 'Luli',
+            texto : 'Que linda fotito'
+        },
+        {
+            id_usuario : 4,
+            nombre : 'MArtuuu',
+            texto : 'buenooo'
         }
+        
+
     ]
     },
     
@@ -105,6 +117,16 @@ posteos:[
                 id_usuario : 2,
                 nombre : 'Betty',
                 texto : 'ojala estar asi!'
+            },
+            {
+                id_usuario : 3,
+                nombre : 'Lucio',
+                texto : 'wow!!'
+            },
+            {
+                id_usuario : 4,
+                nombre : 'Sofii',
+                texto : 'playaaaa'
             }
         ]
         },
@@ -125,6 +147,16 @@ posteos:[
                     id_usuario : 2,
                     nombre : 'Toto',
                     texto : 'la pasamos muy bien!'
+                },
+                {
+                    id_usuario : 3,
+                    nombre : 'Lucas ',
+                    texto : 'Que Bandaa'
+                },
+                {
+                    id_usuario : 4,
+                    nombre : 'Lautii',
+                    texto : 'Vamoosss'
                 }
             ]
             },
@@ -145,6 +177,16 @@ posteos:[
                         id_usuario : 2,
                         nombre : 'Meche',
                         texto : 'igual que nemo!'
+                    },
+                    {
+                        id_usuario : 3,
+                        nombre : 'Bety',
+                        texto : 'WOW'
+                    },
+                    {
+                        id_usuario : 4,
+                        nombre : 'Luis',
+                        texto : 'Que lindo'
                     }
                 ]
                 },
@@ -185,6 +227,16 @@ posteos:[
                                 id_usuario : 2,
                                 nombre : 'Meche',
                                 texto : 'igual que nemo!'
+                            },
+                            {
+                                id_usuario : 3,
+                                nombre : 'Luli',
+                                texto : 'Que linda fotito'
+                            },
+                            {
+                                id_usuario : 4,
+                                nombre : 'MArtuuu',
+                                texto : 'buenooo'
                             }
                         ]
                         },
@@ -205,6 +257,16 @@ posteos:[
                 id_usuario : 2,
                 nombre : 'Julio',
                 texto : 'que lindos'
+            },
+            {
+                id_usuario : 3,
+                nombre : 'Luli',
+                texto : 'Que linda fotito'
+            },
+            {
+                id_usuario : 4,
+                nombre : 'MArtuuu',
+                texto : 'buenooo'
             }
         ]
         },
@@ -225,6 +287,16 @@ posteos:[
                 id_usuario : 2,
                 nombre : 'Laura',
                 texto : 'que linda foto Betty'
+            },
+            {
+                id_usuario : 3,
+                nombre : 'Luli',
+                texto : 'Que linda fotito'
+            },
+            {
+                id_usuario : 4,
+                nombre : 'MArtuuu',
+                texto : 'buenooo'
             }
         ]
         },
@@ -245,6 +317,16 @@ posteos:[
                     id_usuario : 2,
                     nombre : 'Laura',
                     texto : 'que linda foto Betty'
+                },
+                {
+                    id_usuario : 3,
+                    nombre : 'Luli',
+                    texto : 'Que linda fotito'
+                },
+                {
+                    id_usuario : 4,
+                    nombre : 'MArtuuu',
+                    texto : 'buenooo'
                 }
             ]
             },
@@ -265,6 +347,16 @@ posteos:[
                         id_usuario : 2,
                         nombre : 'Pelu',
                         texto : 'que buen mate'
+                    },
+                    {
+                        id_usuario : 3,
+                        nombre : 'Luli',
+                        texto : 'Que linda fotito'
+                    },
+                    {
+                        id_usuario : 4,
+                        nombre : 'MArtuuu',
+                        texto : 'buenooo'
                     }
                 ]
                 },
@@ -285,6 +377,16 @@ posteos:[
                             id_usuario : 2,
                             nombre : 'Pili',
                             texto : 'que lindo NYC'
+                        },
+                        {
+                            id_usuario : 3,
+                            nombre : 'Luli',
+                            texto : 'Que lindo'
+                        },
+                        {
+                            id_usuario : 4,
+                            nombre : 'MArtuuu',
+                            texto : 'buenooo'
                         }
                     ]
                     },
@@ -305,6 +407,16 @@ posteos:[
                                 id_usuario : 2,
                                 nombre : 'Martu',
                                 texto : 'pasa receta!!'
+                            },
+                            {
+                                id_usuario : 3,
+                                nombre : 'Luli',
+                                texto : 'Que linda fotito'
+                            },
+                            {
+                                id_usuario : 4,
+                                nombre : 'MArtuuu',
+                                texto : 'buenooo'
                             }
                         ]
                         },
@@ -326,6 +438,16 @@ posteos:[
                                     id_usuario : 2,
                                     nombre : 'Kika',
                                     texto : 'Divinas!'
+                                },
+                                {
+                                    id_usuario : 3,
+                                    nombre : 'Luli',
+                                    texto : 'Que linda fotito'
+                                },
+                                {
+                                    id_usuario : 4,
+                                    nombre : 'MArtuuu',
+                                    texto : 'buenooo'
                                 }
                             ]
                             },
@@ -346,6 +468,16 @@ posteos:[
                                         id_usuario : 2,
                                         nombre : 'Agus',
                                         texto : 'te amo!'
+                                    },
+                                    {
+                                        id_usuario : 3,
+                                        nombre : 'Luli',
+                                        texto : 'Que linda fotito'
+                                    },
+                                    {
+                                        id_usuario : 4,
+                                        nombre : 'MArtuuu',
+                                        texto : 'buenooo'
                                     }
                                 ]
                                 },
@@ -366,6 +498,16 @@ posteos:[
                                             id_usuario : 2,
                                             nombre : 'Vicky',
                                             texto : 'Que bueno Juani!'
+                                        },
+                                        {
+                                            id_usuario : 3,
+                                            nombre : 'Luli',
+                                            texto : 'Que linda fotito'
+                                        },
+                                        {
+                                            id_usuario : 4,
+                                            nombre : 'MArtuuu',
+                                            texto : 'buenooo'
                                         }
                                     ]
                                     },
@@ -386,6 +528,16 @@ posteos:[
                                                 id_usuario : 2,
                                                 nombre : 'Tomi',
                                                 texto : 'Quien pudiera!'
+                                            },
+                                            {
+                                                id_usuario : 3,
+                                                nombre : 'Luli',
+                                                texto : 'Que linda fotito'
+                                            },
+                                            {
+                                                id_usuario : 4,
+                                                nombre : 'MArtuuu',
+                                                texto : 'buenooo'
                                             }
                                         ]
                                         },
@@ -406,6 +558,16 @@ posteos:[
                                                     id_usuario : 2,
                                                     nombre : 'Joaqui',
                                                     texto : 'lindoos!'
+                                                },
+                                                {
+                                                    id_usuario : 3,
+                                                    nombre : 'Luli',
+                                                    texto : 'Que linda fotito'
+                                                },
+                                                {
+                                                    id_usuario : 4,
+                                                    nombre : 'MArtuuu',
+                                                    texto : 'buenooo'
                                                 }
                                             ]
                                             },
@@ -427,6 +589,16 @@ posteos:[
                         id_usuario : 2,
                         nombre : 'Fede',
                         texto : 'alto auto!'
+                    },
+                    {
+                        id_usuario : 3,
+                        nombre : 'Luli',
+                        texto : 'Que linda fotito'
+                    },
+                    {
+                        id_usuario : 4,
+                        nombre : 'MArtuuu',
+                        texto : 'buenooo'
                     }
                 ]
                 },
@@ -447,6 +619,16 @@ posteos:[
                         id_usuario : 2,
                         nombre : 'Dolores',
                         texto : 'que divertido!'
+                    },
+                    {
+                        id_usuario : 3,
+                        nombre : 'Luli',
+                        texto : 'Que linda fotito'
+                    },
+                    {
+                        id_usuario : 4,
+                        nombre : 'MArtuuu',
+                        texto : 'buenooo'
                     }
                 ]
                 },
@@ -467,6 +649,16 @@ posteos:[
                             id_usuario : 2,
                             nombre : 'Choco',
                             texto : 'Hay que repetir!'
+                        },
+                        {
+                            id_usuario : 3,
+                            nombre : 'Luli',
+                            texto : 'Que linda fotito'
+                        },
+                        {
+                            id_usuario : 4,
+                            nombre : 'MArtuuu',
+                            texto : 'buenooo'
                         }
                     ]
                     },
@@ -487,6 +679,16 @@ posteos:[
                                 id_usuario : 2,
                                 nombre : 'Lizandro',
                                 texto : 'Hay que repetir!'
+                            },
+                            {
+                                id_usuario : 3,
+                                nombre : 'Luli',
+                                texto : 'Que linda fotito'
+                            },
+                            {
+                                id_usuario : 4,
+                                nombre : 'MArtuuu',
+                                texto : 'buenooo'
                             }
                         ]
                         },
@@ -507,6 +709,16 @@ posteos:[
                                     id_usuario : 2,
                                     nombre : 'Lorena',
                                     texto : 'que divertidooo'
+                                },
+                                {
+                                    id_usuario : 3,
+                                    nombre : 'Luli',
+                                    texto : 'Que linda fotito'
+                                },
+                                {
+                                    id_usuario : 4,
+                                    nombre : 'MArtuuu',
+                                    texto : 'buenooo'
                                 }
                             ]
                             },
@@ -527,6 +739,16 @@ posteos:[
                                         id_usuario : 2,
                                         nombre : 'Choco',
                                         texto : 'Hay que repetir!'
+                                    },
+                                    {
+                                        id_usuario : 3,
+                                        nombre : 'Luli',
+                                        texto : 'Que linda fotito'
+                                    },
+                                    {
+                                        id_usuario : 4,
+                                        nombre : 'MArtuuu',
+                                        texto : 'buenooo'
                                     }
                                 ]
                                 },
@@ -547,6 +769,16 @@ posteos:[
                                             id_usuario : 2,
                                             nombre : 'Choco',
                                             texto : 'Hay que repetir!'
+                                        },
+                                        {
+                                            id_usuario : 3,
+                                            nombre : 'Luli',
+                                            texto : 'Que linda fotito'
+                                        },
+                                        {
+                                            id_usuario : 4,
+                                            nombre : 'MArtuuu',
+                                            texto : 'buenooo'
                                         }
                                     ]
                                     },
@@ -567,6 +799,16 @@ posteos:[
                             id_usuario : 2,
                             nombre : 'Agustin',
                             texto : 'que buena moto!'
+                        },
+                        {
+                            id_usuario : 3,
+                            nombre : 'Luli',
+                            texto : 'Que linda fotito'
+                        },
+                        {
+                            id_usuario : 4,
+                            nombre : 'MArtuuu',
+                            texto : 'buenooo'
                         }
                     ]
                     },
@@ -587,6 +829,16 @@ posteos:[
                                 id_usuario : 2,
                                 nombre : 'Agustin',
                                 texto : 'que lindo gato!'
+                            },
+                            {
+                                id_usuario : 3,
+                                nombre : 'Luli',
+                                texto : 'Que linda fotito'
+                            },
+                            {
+                                id_usuario : 4,
+                                nombre : 'MArtuuu',
+                                texto : 'buenooo'
                             }
                         ]
                         }
