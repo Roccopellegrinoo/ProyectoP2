@@ -493,7 +493,7 @@ posteos:[
                         {
                             id_posteo : 4,
                             id_usuario:4,
-                            foto:'/images/posteos/posteo41.jpeg',
+                            foto:'/images/posteos/posteo22.jpeg',
                             fotoPerfil:'/images/usuarios/usuario_elpetter.jpeg',
                             texto:'De fiesta con amigos',
                             username: 'El Petter',
@@ -513,7 +513,7 @@ posteos:[
                             {
                                 id_posteo : 4,
                                 id_usuario:4,
-                                foto:'/images/posteos/posteo41.jpeg',
+                                foto:'/images/posteos/posteo23.jpeg',
                                 fotoPerfil:'/images/usuarios/usuario_elpetter.jpeg',
                                 texto:'De fiesta con amigos',
                                 username: 'El Petter',
