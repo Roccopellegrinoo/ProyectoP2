@@ -11,7 +11,7 @@ search: function(req, res) {
  
 
   
-    res.render('resultadoBusqueda', {info:data.usuarios ,posteo: data.posteos});
+    res.render('resultadoBusqueda', {results:data.usuarios ,posteo: data.posteos});
   }
 
 

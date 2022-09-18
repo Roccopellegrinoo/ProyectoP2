@@ -1,4 +1,3 @@
-const { usuarios } = require('../data/index');
 const data = require('../data/index')
 const usersController = {
     miPerfil: function(req, res) {
