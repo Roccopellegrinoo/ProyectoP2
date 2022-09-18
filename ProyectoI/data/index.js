@@ -8,7 +8,7 @@ usuarios:[{
    contrasenia: 'contrasenia12',
    nacimiento: '2002-11-05',
    DNI: '44566344',
-   posteos: 5,
+   posteos: 6,
    seguidores : 1250,
    seguidos: 800,
 
@@ -22,7 +22,7 @@ mail: 'Labetty@gmail.com',
 contrasenia: 'contrasenia13',
 nacimiento: '1995-11-05',
 DNI: '41440334',
-posteos: 3,
+posteos: 6,
    seguidores : 150,
    seguidos: 30,
 
@@ -35,7 +35,7 @@ mail: 'Juanitaok@gmail.com',
 contrasenia: 'contrasenia14',
 nacimiento: '1991-09-06',
 DNI: '44366344',
-posteos: 4,
+posteos: 6,
    seguidores : 114,
    seguidos: 150,
 },
@@ -47,7 +47,7 @@ mail: 'PedroVelazco@gmail.com',
 contrasenia: 'contrasenia123',
 nacimiento: '1991-09-06',
 DNI: '44242000',
-posteos: 30,
+posteos: 6,
    seguidores :100,
    seguidos: 100,
 },
@@ -59,7 +59,7 @@ mail: 'MarthaLamothe@gmail.com',
 contrasenia: 'contrasenia34',
 nacimiento: '1990-10-07',
 DNI: '434568574',
-posteos: 20,
+posteos: 2,
    seguidores : 130,
    seguidos: 49,
 }
@@ -475,17 +475,17 @@ posteos:[
                         id_usuario:4,
                         foto:'/images/posteos/posteo20.jpeg',
                         fotoPerfil:'/images/usuarios/usuario_elpetter.jpeg',
-                        texto:'De fiesta con amigos',
+                        texto:'Vinos',
                         username: 'El Petter',
                         comentarios :[
                             {
                                 id_usuario : 1,
-                                nombre : 'Torto',
-                                texto : 'Que buena noche'
+                                nombre : 'Santi',
+                                texto : 'Que buena juntada'
                             },
                             {
                                 id_usuario : 2,
-                                nombre : 'Choco',
+                                nombre : 'Lizandro',
                                 texto : 'Hay que repetir!'
                             }
                         ]
@@ -495,18 +495,18 @@ posteos:[
                             id_usuario:4,
                             foto:'/images/posteos/posteo22.jpeg',
                             fotoPerfil:'/images/usuarios/usuario_elpetter.jpeg',
-                            texto:'De fiesta con amigos',
+                            texto:'Sobrinos en la pile',
                             username: 'El Petter',
                             comentarios :[
                                 {
                                     id_usuario : 1,
-                                    nombre : 'Torto',
-                                    texto : 'Que buena noche'
+                                    nombre : 'Julia',
+                                    texto : 'Que lindos'
                                 },
                                 {
                                     id_usuario : 2,
-                                    nombre : 'Choco',
-                                    texto : 'Hay que repetir!'
+                                    nombre : 'Lorena',
+                                    texto : 'que divertidooo'
                                 }
                             ]
                             },
