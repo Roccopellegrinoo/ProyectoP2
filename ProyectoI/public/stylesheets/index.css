@@ -19,7 +19,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color: red
+    color:rgb(22, 157, 230)
 
 }
 /* navigation */
@@ -205,8 +205,10 @@ main {
     margin-right: 20px;
     color: rgb(22, 157, 230);
 }
+
 .team li {
     margin-left: 20px;
+    color:rgb(22, 157, 230)
 }
 
 /* Post detail */
@@ -321,16 +323,19 @@ main {
 }
 .follow {
     padding: 3px 20px 7px;
-    background-color: mediumseagreen;
-    border: 1px solid mediumaquamarine;
+    background-color: rgb(22, 157, 230);
+    border: 1px solid rgb(22, 157, 230);
     border-radius: 5px;
-    color: rgba(255, 255, 255, 0.666);
+    color: white;
     margin-left: 20px;
     
 }
+.follow a{
+    color: white;
+}
 .follow:hover{
     cursor: pointer;
-    background-color: forestgreen;
+    background-color: grey;
 }
 .profile {
     width: 100px;
