@@ -132,6 +132,7 @@ main {
     color: rgb(22, 157, 230);
     font-weight: bolder;
     font-size: 17px;
+    font-style: bold;
 
 
 }
@@ -154,6 +155,7 @@ main {
 .info-usuario .img-perfil {
     width: 40px;
     height: 40px;
+
 }
 .post-reacciones {
     display: flex;
@@ -188,6 +190,7 @@ main {
     justify-content: space-between;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    color: rgb(22, 157, 230);
 }
 .main-footer {
     position: fixed;
@@ -264,14 +267,17 @@ main {
 }
 .comment-form button {
     padding: 5px 0;
-    background-color:mediumseagreen;
-    border: 1px solid mediumaquamarine;
+    background-color:rgb(22, 157, 230);
+    border: 1px solid rgb(22, 157, 230);
     border-radius: 5px;
     color: #fff;
 }
+.right h4{
+    color:rgb(22, 157, 230)
+}
 .comment-form button:hover {
     cursor: pointer;
-    background-color: forestgreen;
+    background-color: rgb(22, 157, 230);
 }
 /* User detail */
 
