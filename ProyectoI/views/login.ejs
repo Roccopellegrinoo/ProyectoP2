@@ -9,12 +9,14 @@
     <main>
         <section class="center main-content">
         <h1>Login</h1>
-        <form action="/users/miPerfil/1" method="get">
-            <input type="email" name="mail" placeholder="mail" id="">
-            <input type="password" name="password" placeholder="contraseña" id="">
+        <form action="/users/login" method="post">
+            <input required type="email" name="email" placeholder="mail" id="">
+            <input required type="password" name="password" placeholder="contraseña" id="">
            
             <button type="submit">Login</button>
-            
+            <% if (locals.error) {%> 
+               <p> <%= locals.error %> </p>
+            <% } %> 
     
           </form>
         </section>

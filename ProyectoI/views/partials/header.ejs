@@ -6,19 +6,25 @@
             <h2 class="logo"><img src="/images/logo.png"></h2>
         </div>
         <div class="navbar-center">
-            <form  method="get" action="/resultadoDeBusqueda" class="search">
+            <form method="get" action="/resultadoDeBusqueda" class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="texto"  class="search-input" placeholder="Buscar...">
+                <input type="search" name="texto" class="search-input" placeholder="Buscar...">
             </form>
         </div>
         <div class="navbar-right">
             <ul class="menu">
-                <li><a href="/users/register">Registro</a></li>
-                <li><a href="/users/Login">Login</a></li>
-                <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="/posts/agregarPost"><i class="fa-regular fa-square-plus"></i></a></li>
-                <li><a href="/users/miPerfil/1"><i class="fa-regular fa-user"></i></a></li>
-                <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+
+                <% if (!locals?.usuario){ %>
+                    <li><a href="/users/register">Registro</a></li>
+                    <li><a href="/users/Login">Login</a></li>
+                <% } else{ %>
+
+                       
+                        <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                        <li><a href="/posts/agregarPost"><i class="fa-regular fa-square-plus"></i></a></li>
+                        <li><a href="/users/miPerfil/1"><i class="fa-regular fa-user"></i></a></li>
+                        <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+                <% } %> 
             </ul>
         </div>
     </nav>

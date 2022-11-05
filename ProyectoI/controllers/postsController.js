@@ -3,6 +3,7 @@ const postsController = {
   agregarPost: function (req, res) {
     res.render('agregarPost', { title: 'Express' });
   },
+  //hacer misma validacion que editar perfil//
 
   detallePost: function (req, res) {
     let post = {}
