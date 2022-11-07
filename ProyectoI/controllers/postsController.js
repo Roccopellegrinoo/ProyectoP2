@@ -1,4 +1,5 @@
 const index = require('../data/index')
+const db = require('../database/models')
 const postsController = {
   agregarPost: function (req, res) {
     res.render('agregarPost', { title: 'Express' });
@@ -15,6 +16,16 @@ const postsController = {
     console.log (req.params.id)
     res.render('detallePost', { post:post});
   },
+  crearPost : function (req, res) {
+    db.Posteo.create({
+      id_usuario: req.session.usuario.id,
+      texto: req.body.texto,
+      texto_descriptivo: req.body.descriptivo,
+      imagen: req.file.filename
+    })
+    .then((posteo)=> res.redirect('/posts/detallePost/'+posteo.id))
+    
+  }
 
 
 

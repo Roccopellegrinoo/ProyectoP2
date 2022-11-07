@@ -20,6 +20,7 @@ id int unsigned primary key auto_increment,
 id_usuario int unsigned,
 texto varchar(100) NOT NULL,
 texto_descriptivo varchar(100) NOT NULL,
+imagen varchar(100) NOT NULL,
 foreign key (id_usuario) references usuario(id),
 createdAt timestamp default current_timestamp,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP

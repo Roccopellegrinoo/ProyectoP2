@@ -31,8 +31,8 @@ app.use(session({
 app.use(function(req, res, next) {
   /* Logica */
 
-  if (req.session.user != undefined) {
-      res.locals.user = req.session.user;
+  if (req.session.usuario != undefined) {
+      res.locals.usuario = req.session.usuario;
   }
 
   return next();

@@ -17,6 +17,9 @@ module.exports = function(sequelize, DataTypes) {
         texto_descriptivo:{
             type: DataTypes.STRING
         },
+        imagen:{
+            type: DataTypes.STRING
+        },
        
     }, {
     tableName: 'posteos', //di la tabla no se llama en plural como el modelo, por ejemplo nuestra tabla de jugadores osea PLAYER en modelo se tiene que llamar PLAYERS LA TABLA
