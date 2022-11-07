@@ -12,7 +12,9 @@
         <form action="/users/login" method="post">
             <input required type="email" name="email" placeholder="mail" id="">
             <input required type="password" name="password" placeholder="contraseña" id="">
-           
+                <input id="recordarme" class="recordarme" type="checkbox" name="remember" />
+                <label class="recordarmeLabel" for="Recordarme">recordarme</label>
+            </div>
             <button type="submit">Login</button>
             <% if (locals.error) {%> 
                <p> <%= locals.error %> </p>
