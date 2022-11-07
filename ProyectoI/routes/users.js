@@ -25,5 +25,6 @@ router.post('/register',upload.single('foto'),usersController.registerUser)
 router.get('/editarPerfil/:id',usersController.editarPerfil)
 router.get('/detalleUsuario/:id',usersController.detalleUsuario)
 router.get('/miPerfil/:id',usersController.miPerfil)
+router.get('/logout',usersController.logout)
 
 module.exports = router;

@@ -382,3 +382,7 @@ body {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+#error {
+    color: red
+}

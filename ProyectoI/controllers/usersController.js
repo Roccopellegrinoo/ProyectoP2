@@ -42,6 +42,10 @@ const usersController = {
     res.render('login', {});
   },
   sesion: function (req, res) {
+    if (req.body.password.length<3) {
+      res.locals.error = 'La contrasena debe tener almenos tres caracteres'
+           return res.render('login', {});
+    }
     let filtro = {
       where: { email: req.body.email }
     }
@@ -51,18 +55,21 @@ const usersController = {
         if (usuario != null) {
           let passEncriptada = bcrypt.compareSync(req.body.password, usuario.contrasenia)
           if (passEncriptada) {
-            req.session.usuario = result.dataValues;
+            req.session.usuario = usuario.dataValues;
+            res.locals.usuario  = usuario.dataValues;
 
             if (req.body.remember != undefined) {
-              res.cookie('userId', result.dataValues.id, { maxAge: 1000 * 60 * 10 })
+              res.cookie('userId', usuario.dataValues.id, { maxAge: 1000 * 60 * 10 })
             }
             return res.redirect('/');
           } else {
-            return res.send('la clave no coincide')
+            res.locals.error = 'La contrasena no coincide'
+           return res.render('login', {});
           }
 
         }else {
-           return res.send("Que no se encontro un mail");
+          res.locals.error = 'El email no coincide'
+           return res.render('login', {});
         }
         
         
@@ -87,6 +94,12 @@ const usersController = {
       foto: req.file.filename,
     })
       .then(() => res.redirect('/users/login'))
+  }, 
+  logout: function (req, res) {
+    req.session.destroy()
+    res.clearCookie('userId')
+    res.redirect('/users/login')
+    
   }
 
 }

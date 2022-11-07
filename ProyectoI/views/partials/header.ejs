@@ -3,7 +3,9 @@
 <header class="main-header">
     <nav class="main-nav">
         <div class="navbar-left">
-            <h2 class="logo"><img src="/images/logo.png"></h2>
+            <a href="/">
+                <h2 class="logo"><img src="/images/logo.png"></h2>
+            </a>
         </div>
         <div class="navbar-center">
             <form method="get" action="/resultadoDeBusqueda" class="search">
@@ -13,17 +15,16 @@
         </div>
         <div class="navbar-right">
             <ul class="menu">
-
-                <% if (!locals?.usuario){ %>
+                <% if (locals.usuario == undefined){ %>
                     <li><a href="/users/register">Registro</a></li>
                     <li><a href="/users/Login">Login</a></li>
                 <% } else{ %>
 
-                       
+                       <li> <%= locals.usuario.nombre %> </li>
                         <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
                         <li><a href="/posts/agregarPost"><i class="fa-regular fa-square-plus"></i></a></li>
                         <li><a href="/users/miPerfil/1"><i class="fa-regular fa-user"></i></a></li>
-                        <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+                        <li><a href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                 <% } %> 
             </ul>
         </div>
