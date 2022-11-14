@@ -19,6 +19,7 @@ let upload = multer({storage: storage});
 router.get('/agregarPost',postsController.agregarPost);
 router.post('/agregarPost',upload.single('imagen'),postsController.crearPost);
 router.get('/detallePost/:id',postsController.detallePost);
+router.post('/agregarComentario/:id',postsController.agregarComentario);
 
 
 module.exports = router;

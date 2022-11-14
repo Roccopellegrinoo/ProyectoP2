@@ -36,6 +36,15 @@ const postsController = {
     })
     .then((posteo)=> res.redirect('/posts/detallePost/'+posteo.id))
     
+  },
+  agregarComentario : function (req, res) {
+
+    db.Comentario.create({
+      id_post: req.params.id, 
+      id_usuario: req.session.usuario.id,
+      texto: req.body.comentario,
+    })
+    .then(()=> res.redirect('/posts/detallePost/'+req.params.id))
   }
 
 
