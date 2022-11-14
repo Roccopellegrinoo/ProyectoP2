@@ -28,6 +28,14 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Posteo.associate = (models) => {
+        Posteo.belongsTo(models.Usuario,{
+            foreignKey: 'id_usuario',
+            as:'usuario'
+
+        })
+        Posteo.hasMany(models.Comentario,{
+            foreignKey:'id_post'
+        })
 
         
     };

@@ -10,10 +10,10 @@
         <div class="post-detail container">
             <section class="center main-content post">
                 <div class="info-usuario">
-                    <img src="<%= post.fotoPerfil %>" alt="">
-                    <p><a href="/users/detalleUsuario/<%= post.id_usuario %> "> <%= post.username %> </a></p>
+                    <img src="/images/usuarios/<%= post.usuario.foto %>" alt="">
+                    <p><a href="/users/detalleUsuario/<%= post.id_usuario %> "> <%= post.usuario.usuario %> </a></p>
                 </div>
-                <img class="photo" src="<%= post.foto %>" alt="">
+                <img class="photo" src="/images/posteos/<%= post.imagen %>" alt="">
             </section>
             <section class="right">
                 <h4>Comentarios</h4>
@@ -23,12 +23,12 @@
                         <button type="submit">Comentar</button>
                     </form>
                     <div>
-                        <% for (let i=0; i<post.comentarios.length; i++) {%> 
+                        <% for (let i=0; i<post.Comentarios.length; i++) {%> 
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <a class="user" href="/users/detalleUsuario/<%= post.comentarios[i].id_usuario %> "><%= post.comentarios[i].nombre %> </a>
-                                <span class="text"> <%= post.comentarios[i].texto %> </span>
+                                <a class="user" href="/users/detalleUsuario/<%= post.Comentarios[i].id_usuario %> "><%= post.Comentarios[i].usuario.usuario %> </a>
+                                <span class="text"> <%= post.Comentarios[i].texto %> </span>
                             </section>
                         </article> 
                         <% } %> 

@@ -2,19 +2,30 @@ const index = require('../data/index')
 const db = require('../database/models')
 const postsController = {
   agregarPost: function (req, res) {
-    res.render('agregarPost', { title: 'Express' });
+    if(req.session.usuario){
+      res.render('agregarPost', { title: 'Express' });
+    }
+    else{
+      res.redirect('/users/login')
+    }
   },
   //hacer misma validacion que editar perfil//
 
   detallePost: function (req, res) {
-    let post = {}
-      for (let i = 0; i < index.posteos.length; i++) {
-        if (req.params.id==index.posteos[i].id_posteo) { 
-          post=index.posteos[i]
-        }
+    db.Posteo.findOne({
+      include: {
+        all: true, 
+        nested: true
       }
-    console.log (req.params.id)
-    res.render('detallePost', { post:post});
+    },{
+      where: {
+        id: req.params.id
+      }
+    })
+    .then((post)=> {
+     // res.send(post)
+      res.render('detallePost', { post:post});
+    })
   },
   crearPost : function (req, res) {
     db.Posteo.create({
