@@ -7,9 +7,9 @@ router.get('/',indexController.home);
 
 router.get('/resultadoDeBusqueda',indexController.search);
 
-router.get('/prueba',async(req, res) =>{
-    res.send(await db.Usuario.findAll())
-})
+///router.get('/prueba',async(req, res) =>{
+   /// res.send(await db.Usuario.findAll())
+///})
 
 
 module.exports = router;

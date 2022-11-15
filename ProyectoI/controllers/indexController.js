@@ -23,19 +23,33 @@ db.Posteo.findAll({
 })
 },
 
-search: function(req, res) {
+search: function (req, res) {
   let texto = req.query.texto;
-  let info = data.posteos;
- 
 
-  
-    res.render('resultadoBusqueda', {results:data.usuarios ,posteo: data.posteos});
-  }
+  db.Posteo.findAll({
+    include: [
+      {
+        model: db.Usuario,
+        as: 'comentarios_post',
+        through: {
+          attributes: ["texto"],
+        },
+      },
+      {
+        model: db.Usuario,
+        as: 'usuario'
+      }
+    ],
+    order : [["createdAt", "DESC"]],
+    where: [
+      {texto: {[op.like] : "%" + texto + "%"}}
+    ]
 
+  })
+  .then((posteos) => {
+    //res.send(posteos)
+    res.render('resultadoBusqueda',  { posteos: posteos });
+  })
 
-
-
-
-}
-
+}}
 module.exports = indexController

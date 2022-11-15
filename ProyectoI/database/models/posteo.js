@@ -28,17 +28,22 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Posteo.associate = (models) => {
-        Posteo.belongsTo(models.Usuario,{
-            foreignKey: 'id_usuario',
-            as:'usuario'
+        models.Posteo.belongsTo( models.Usuario, {
+            as : 'usuario',
+            foreignKey : 'id_usuario',
+            onDelete: 'cascade' 
+        }),
 
-        })
-        Posteo.hasMany(models.Comentario,{
-            foreignKey:'id_post'
+        models.Posteo.belongsToMany( models.Usuario, {
+            as : 'comentarios_post',
+            through:'comentarios',
+            foreignKey : 'id_post',
+            otherKey:'id_usuario',
+            timestamps:true,
+            onDelete: 'cascade'
         })
 
-        
-    };
+    }
 
     // `sequelize.define` also returns the model
     return Posteo; 

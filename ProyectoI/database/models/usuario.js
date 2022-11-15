@@ -51,7 +51,13 @@ module.exports = function(sequelize, DataTypes) {
             timestamps: true
         })
 
-      
+        models.Usuario.belongsToMany( models.Posteo, {
+            through:'comentarios',
+            as : 'posts',
+            foreignKey : 'id_usuario',
+            otherKey:'id_post',
+            timestamps:true,
+        })
 
     };
 
