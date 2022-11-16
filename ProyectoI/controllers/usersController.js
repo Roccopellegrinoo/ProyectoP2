@@ -4,19 +4,21 @@ const bcrypt = require('bcryptjs')
 const usersController = {
 
   miPerfil: function (req, res) {
-    //register
-    let conHas = bcrypt.hashSync('123', 10);
-    console.log(conHas);
-    //login
-    console.log(bcrypt.compareSync('123', conHas));
-    let id = req.params.id;
-    let usuario = {}
-    for (let index = 0; index < data.usuarios.length; index++) {
-      if (id == data.usuarios[index].id) {
-        usuario = data.usuarios[index]
+    let id = req.session.usuario.id;
+    db.Usuario.findOne({
+      include:{
+        all:true,
+        nested:true
+      },
+      where:{
+        id:id
       }
-    }
-    res.render('miPerfil', { usuario: usuario, posteos: data.posteos });
+    })
+    .then(usuariodb => {
+     // res.send(usuariodb)
+    res.render('miPerfil', { usuariodb:usuariodb });
+    })
+    
   },
 
   editarPerfil: function (req, res) {
@@ -38,8 +40,8 @@ const usersController = {
       }
     })
     .then(usuariodb => {
-      //res.send(usuariodb)
-      res.render('detalleUsuario', { usuariodb:usuariodb });
+     // res.send(usuariodb)
+    res.render('detalleUsuario', { usuariodb:usuariodb });
     })
 
   },

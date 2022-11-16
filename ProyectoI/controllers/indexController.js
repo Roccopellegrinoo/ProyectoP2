@@ -6,19 +6,14 @@ home: function(req,res){
 db.Posteo.findAll({
   include:[
     {
-      model:db.Usuario,
-      as:'comentarios_post',
-      through:{
-        attributes:["texto"],
-      }
-    },
-    {
-      model:db.Usuario,
-      as:'usuario'
+      all:true,
+      nested:true
     }
+    
   ]
 })
 .then((posteos)=>{
+  //res.send(posteos)
   res.render('index',{posteos: posteos});
 })
 },
@@ -29,15 +24,8 @@ search: function (req, res) {
   db.Posteo.findAll({
     include: [
       {
-        model: db.Usuario,
-        as: 'comentarios_post',
-        through: {
-          attributes: ["texto"],
-        },
-      },
-      {
-        model: db.Usuario,
-        as: 'usuario'
+        all:true,
+        nested:true
       }
     ],
     order : [["createdAt", "DESC"]],

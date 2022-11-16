@@ -10,25 +10,25 @@
         <div class="user-detail container">
             <section class="top main-content">
                
-                <img class="profile" src="<%=usuario.foto%>" alt="">
+                <img class="profile" src="/images/usuarios/<%=usuariodb.foto%>" alt="">
                 <div class="info-usuario">
-                    <p><%=usuario.username%></p> 
+                    <p><%=usuariodb.username%></p> 
                     <a class="follow" href="/users/editarPerfil/0"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
-                        <li><%=usuario.posteos %> posteos </li>
-                        <li><%=usuario.seguidores %> seguidores</li>
-                        <li><%=usuario.seguidos %> seguidos</li>
+                        <li><%=usuariodb.posteos %> posteos </li>
+                        <li><%=usuariodb.seguidores %> seguidores</li>
+                        <li><%=usuariodb.seguidos %> seguidos</li>
                     </ul>
                     
                 </div>
             </section>
             <section class="bottom">
                 <% for (let i=0; i<posteos.length; i++){  %> 
-                    <%if(usuario.id == posteos[i].id_usuario){ %>   
+                    <%if(usuariodb.id == posteos[i].id_usuario){ %>   
                 <article class="post">
                     <% let url= `/posts/detallePost/${posteos[i].id_posteo}`%> 
                     <a href="<%= url%>">
-                        <img src="<%=posteos[i].foto %>" alt="">
+                        <img src="/images/posteos/<%=posteos[i].foto %>" alt="">
                         <p><%=posteos[i].texto%></p>
                     </a>
                 </article>

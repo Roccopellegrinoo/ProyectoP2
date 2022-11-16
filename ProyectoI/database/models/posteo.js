@@ -32,15 +32,12 @@ module.exports = function(sequelize, DataTypes) {
             as : 'usuario',
             foreignKey : 'id_usuario',
             onDelete: 'cascade' 
-        }),
+        })
 
-        models.Posteo.belongsToMany( models.Usuario, {
-            as : 'comentarios_post',
-            through:'comentarios',
+        models.Posteo.hasMany( models.Comentario, {
+            as : 'Comentarios',
             foreignKey : 'id_post',
-            otherKey:'id_usuario',
-            timestamps:true,
-            onDelete: 'cascade'
+            onDelete: 'cascade' 
         })
 
     }

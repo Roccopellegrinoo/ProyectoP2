@@ -91,3 +91,5 @@ values (default,1,'/img/usuario.jpg', 'wegjwnew' );
 
 insert into posteos (`id`,`id_usuarios`,`texto`,`texto_descriptivo`)
 values (default,1,'/img/usuario.jpg', 'wegjwnew' );
+
+insert into red_social.seguidores (id_seguido,id_seguidor) values (1,2),(1,3),(2,1), (2,3)

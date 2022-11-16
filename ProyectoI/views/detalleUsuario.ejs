@@ -9,7 +9,7 @@
             <main>
                 <div class="user-detail container">
                     <section class="top main-content">
-                        <img class="profile" src="<%=usuariodb.foto%>" alt="">
+                        <img class="profile" src="/images/usuarios/<%=usuariodb.foto%>" alt="">
                         <div class="info-usuario">
                             <p>
                                 <%=usuariodb.usuario %>
@@ -20,7 +20,7 @@
                                 </li>
                                 <li>Followers: <%=usuariodb.Seguidores.length%>
                                 </li>
-                                <li>Follow: <%=0%>
+                                <li>Follow: <%=usuariodb.Seguidos.length%>
                                 </li>
                             </ul>
                         </div>
@@ -30,7 +30,7 @@
 
                             <article class="post">
                                 <a href="/posts/detallePost/<%=usuariodb.Posteos[i].id%>">
-                                    <img src="<%=usuariodb.Posteos[i].imagen%>" alt="">
+                                    <img src="/images/posteos/<%=usuariodb.Posteos[i].imagen%>" alt="">
                                 </a>
                             </article>
                             <% } %>

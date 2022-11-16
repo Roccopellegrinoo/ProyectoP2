@@ -23,7 +23,7 @@ const postsController = {
       }
     })
     .then((post)=> {
-     // res.send(post)
+      // res.send(post)
       res.render('detallePost', { post:post});
     })
   },
