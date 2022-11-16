@@ -3,42 +3,45 @@
 
 <%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/header') %>
+    <body>
+        <%- include('./partials/header') %>
 
-    <main>
-        <div class="user-detail container">
-            <section class="top main-content">
-                <img class="profile" src="<%=usuario.foto%>" alt="">
-                <div class="info-usuario">
-                    <p><%=usuario.username %></p>
-                    <a class="follow" href="">seguir</a>
-                    <ul class="meta">
-                        <li>Post: <%=usuario.posteos%></li>
-                        <li>Followers: <%=usuario.seguidores%></li>
-                        <li>Follow: <%=usuario.seguidos%></li>
-                    </ul>
+            <main>
+                <div class="user-detail container">
+                    <section class="top main-content">
+                        <img class="profile" src="<%=usuariodb.foto%>" alt="">
+                        <div class="info-usuario">
+                            <p>
+                                <%=usuariodb.usuario %>
+                            </p>
+                            <a class="follow" href="">seguir</a>
+                            <ul class="meta">
+                                <li>Post: <%=usuariodb.Posteos.length%>
+                                </li>
+                                <li>Followers: <%=usuariodb.Seguidores.length%>
+                                </li>
+                                <li>Follow: <%=0%>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="bottom">
+                        <% for (let i=0 ; i < usuariodb.Posteos.length; i++) { %>
+
+                            <article class="post">
+                                <a href="/posts/detallePost/<%=usuariodb.Posteos[i].id%>">
+                                    <img src="<%=usuariodb.Posteos[i].imagen%>" alt="">
+                                </a>
+                            </article>
+                            <% } %>
+
+                    </section>
+
                 </div>
-            </section>
-            <section class="bottom">
-                <% for (let i = 0 ; i <posteos.length ; i++) { %>
-                    <%if(usuario.id == posteos[i].id_usuario){ %>
+            </main>
 
-                  
-                <article class="post">
-                    <a href="/posts/detallePost/<%=posteos[i].id_posteo%>">
-                        <img src="<%=posteos[i].foto%>" alt="">
-                    </a>
-                </article>
-                <% } %>
-                <% } %>
-            </section>
+            <%- include('./partials/footer') %>
 
-        </div>
-    </main>
-
-    <%- include('./partials/footer') %>
-
-</body>
+    </body>
 
 </html>
