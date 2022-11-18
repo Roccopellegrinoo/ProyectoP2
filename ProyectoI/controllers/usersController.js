@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs')
 const usersController = {
 
   miPerfil: function (req, res) {
-    let id = req.session.usuario.id;
+    let id = req.params.id;
     db.Usuario.findOne({
       include:{
         all:true,
@@ -15,8 +15,8 @@ const usersController = {
       }
     })
     .then(usuariodb => {
-     // res.send(usuariodb)
-    res.render('miPerfil', { usuariodb:usuariodb });
+    // res.send(usuariodb)
+     res.render('miPerfil', { usuariodb:usuariodb });
     })
     
   },

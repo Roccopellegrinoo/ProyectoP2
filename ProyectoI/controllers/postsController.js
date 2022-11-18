@@ -16,15 +16,14 @@ const postsController = {
       include: {
         all: true, 
         nested: true
-      }
-    },{
+      },
       where: {
         id: req.params.id
       }
     })
     .then((post)=> {
-      // res.send(post)
-      res.render('detallePost', { post:post});
+       //res.send(post)
+       res.render('detallePost', { post:post});
     })
   },
   crearPost : function (req, res) {
