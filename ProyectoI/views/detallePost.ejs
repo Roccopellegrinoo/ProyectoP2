@@ -25,7 +25,7 @@
                     <div>
                         <% if(locals.usuario){ %> 
                             <% if(locals.usuario.id == post.id_usuario){ %> 
-                                <a color="red" href="">Editar</a>
+                                <a color="red" href="/posts/editarPost/<%=post.id%>">Editar</a>
                                 <a color="red" href="/posts/eliminarPost/<%=post.id%>">Eliminar</a>
                             <%}%> 
                         <%}%> 

@@ -56,7 +56,36 @@ const postsController = {
       }
     })
     .then(() => res.redirect('/'))
-  }
+  },
+  editarPost: function (req, res) {
+    db.Posteo.findOne({
+      include: {
+        all: true,
+        nested: true
+      },
+      where: {
+        id: req.params.id
+      }
+    })
+    .then((post) => {
+      //res.send(post)
+      res.render('editarPost',{post:post})
+    })
+  },
+  modificarPost: function (req, res) {
+    db.Posteo.update({
+        texto: req.body.texto,
+        texto_descriptivo: req.body.descriptivo,
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+      )
+      .then((posteo) => res.redirect('/posts/detallePost/' + req.params.id))
+
+  },
 }
 
 module.exports = postsController;
