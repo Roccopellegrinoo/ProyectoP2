@@ -21,7 +21,7 @@ id_usuario int unsigned,
 texto varchar(100) NOT NULL,
 texto_descriptivo varchar(100) NOT NULL,
 imagen varchar(100) NOT NULL,
-foreign key (id_usuario) references usuario(id),
+foreign key (id_usuario) references usuario(id) ON DELETE CASCADE,
 createdAt timestamp default current_timestamp,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -31,8 +31,8 @@ id INT unsigned primary key auto_increment,
 id_post int unsigned ,
 id_usuario int unsigned,
 texto varchar(50),
-foreign key (id_post) references posteos(id),
-foreign key (id_usuario) references usuario(id),
+foreign key (id_post) references posteos(id) ON DELETE CASCADE,
+foreign key (id_usuario) references usuario(id) ON DELETE CASCADE,
 createdAt timestamp default current_timestamp,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -41,8 +41,8 @@ create table seguidores(
 id INT unsigned primary key auto_increment,
 id_seguido int unsigned ,
 id_seguidor int unsigned,
-foreign key (id_seguido) references usuario(id),
-foreign key (id_seguidor) references usuario(id),
+foreign key (id_seguido) references usuario(id) ON DELETE CASCADE,
+foreign key (id_seguidor) references usuario(id)ON DELETE CASCADE,
 createdAt timestamp default current_timestamp,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );

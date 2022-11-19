@@ -10,11 +10,12 @@ db.Posteo.findAll({
       nested:true
     }
     
-  ]
+  ], 
+  order: [["createdAt","desc"]]
 })
 .then((posteos)=>{
   //res.send(posteos)
-  res.render('index',{posteos: posteos});
+ res.render('index',{posteos: posteos});
 })
 },
 

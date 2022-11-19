@@ -20,6 +20,7 @@ router.get('/agregarPost',postsController.agregarPost);
 router.post('/agregarPost',upload.single('imagen'),postsController.crearPost);
 router.get('/detallePost/:id',postsController.detallePost);
 router.post('/agregarComentario/:id',postsController.agregarComentario);
+router.get('/eliminarPost/:id',postsController.eliminarPost);
 
 
 module.exports = router;
