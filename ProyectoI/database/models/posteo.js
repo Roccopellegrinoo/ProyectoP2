@@ -49,6 +49,6 @@ module.exports = function(sequelize, DataTypes) {
 
     }
 
-    // `sequelize.define` also returns the model
+   
     return Posteo; 
 }
