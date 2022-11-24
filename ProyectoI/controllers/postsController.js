@@ -3,7 +3,7 @@ const db = require('../database/models')
 const postsController = {
   agregarPost: function (req, res) {
     if(req.session.usuario){
-      res.render('agregarPost', { title: 'Express' });
+      res.render('agregarPost');
     }
     else{
       res.redirect('/users/login')

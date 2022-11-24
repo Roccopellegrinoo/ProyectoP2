@@ -39,12 +39,12 @@ const usersController = {
 
   },
   login: function (req, res) {
-    res.render('login', {});
+    res.render('login');
   },
   sesion: function (req, res) {
     if (req.body.password.length<3) {
       res.locals.error = 'La contrasena debe tener almenos tres caracteres'
-           return res.render('login', {});
+           return res.render('login');
     }
     let filtro = {
       where: { email: req.body.email }
@@ -64,12 +64,12 @@ const usersController = {
             return res.redirect('/');
           } else {
             res.locals.error = 'La contrasena no coincide'
-           return res.render('login', {});
+           return res.render('login');
           }
 
         }else {
           res.locals.error = 'El email no coincide'
-           return res.render('login', {});
+           return res.render('login');
         }
         
         
@@ -80,7 +80,7 @@ const usersController = {
   },
 
   register: function (req, res) {
-    res.render('registracion', {});
+    res.render('registracion');
   },
   registerUser: function (req, res) {
     db.Usuario.create({
