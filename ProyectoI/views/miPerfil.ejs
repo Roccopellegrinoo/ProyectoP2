@@ -10,30 +10,28 @@
         <div class="user-detail container">
             <section class="top main-content">
                
-                <img class="profile" src="<%=usuario.foto%>" alt="">
+                <img class="profile" src="/images/usuarios/<%=usuariodb.foto%>" alt="">
                 <div class="info-usuario">
-                    <p><%=usuario.username%></p> 
+                    <p><%=usuariodb.username%></p> 
                     <a class="follow" href="/users/editarPerfil/0"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
-                        <li><%=usuario.posteos %> posteos </li>
-                        <li><%=usuario.seguidores %> seguidores</li>
-                        <li><%=usuario.seguidos %> seguidos</li>
+                        <li><%=usuariodb.Posteos.length %> posteos </li>
+                        <li><%=usuariodb.Seguidores.length %> seguidores</li>
+                        <li><%=usuariodb.Seguidos.length %> seguidos</li>
                     </ul>
                     
                 </div>
             </section>
             <section class="bottom">
-                <% for (let i=0; i<posteos.length; i++){  %> 
-                    <%if(usuario.id == posteos[i].id_usuario){ %>   
-                <article class="post">
-                    <% let url= `/posts/detallePost/${posteos[i].id_posteo}`%> 
+                <% for (let i=0; i<usuariodb.Posteos.length; i++){  %> 
+                    <article class="post">
+                    <% let url= `/posts/detallePost/${usuariodb.Posteos[i].id}`%> 
                     <a href="<%= url%>">
-                        <img src="<%=posteos[i].foto %>" alt="">
-                        <p><%=posteos[i].texto%></p>
+                        <img src="/images/posteos/<%=usuariodb.Posteos[i].imagen %>" alt="">
+                        <p><%=usuariodb.Posteos[i].texto%></p>
                     </a>
-                </article>
-           <% } %>
-           <% } %>
+                     </article>
+                 <% } %>
             </section>
         </div>
     </main>

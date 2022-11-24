@@ -23,6 +23,14 @@
                         <button type="submit">Comentar</button>
                     </form>
                     <div>
+                        <% if(locals.usuario){ %> 
+                            <% if(locals.usuario.id == post.id_usuario){ %> 
+                                <a color="red" href="/posts/editarPost/<%=post.id%>">Editar</a>
+                                <a color="red" href="/posts/eliminarPost/<%=post.id%>">Eliminar</a>
+                            <%}%> 
+                        <%}%> 
+                    </div>
+                    <div>
                         <% for (let i=0; i<post.Comentarios.length; i++) {%> 
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">

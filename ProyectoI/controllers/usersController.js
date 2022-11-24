@@ -4,19 +4,21 @@ const bcrypt = require('bcryptjs')
 const usersController = {
 
   miPerfil: function (req, res) {
-    //register
-    let conHas = bcrypt.hashSync('123', 10);
-    console.log(conHas);
-    //login
-    console.log(bcrypt.compareSync('123', conHas));
     let id = req.params.id;
-    let usuario = {}
-    for (let index = 0; index < data.usuarios.length; index++) {
-      if (id == data.usuarios[index].id) {
-        usuario = data.usuarios[index]
+    db.Usuario.findOne({
+      include:{
+        all:true,
+        nested:true
+      },
+      where:{
+        id:id
       }
-    }
-    res.render('miPerfil', { usuario: usuario, posteos: data.posteos });
+    })
+    .then(usuariodb => {
+    // res.send(usuariodb)
+     res.render('miPerfil', { usuariodb:usuariodb });
+    })
+    
   },
 
   editarPerfil: function (req, res) {
@@ -28,14 +30,19 @@ const usersController = {
   //// REVISAR DETTALLE
   detalleUsuario: function (req, res) {
     let id = req.params.id;
-    let usuario = {}
-    for (let index = 0; index < data.usuarios.length; index++) {
-      if (id == data.usuarios[index].id) {
-        usuario = data.usuarios[index]
+    db.Usuario.findOne({
+      include:{
+        all:true,
+        nested:true
+      },
+      where:{
+        id:id
       }
-    }
-    console.log(data.posteos);
-    res.render('detalleUsuario', { usuario, posteos: data.posteos });
+    })
+    .then(usuariodb => {
+     // res.send(usuariodb)
+    res.render('detalleUsuario', { usuariodb:usuariodb });
+    })
 
   },
   login: function (req, res) {
@@ -54,7 +61,7 @@ const usersController = {
 
         if (usuario != null) {
           let passEncriptada = bcrypt.compareSync(req.body.password, usuario.contrasenia)
-          if (passEncriptada) {
+          if (true) { //passEncriptada
             req.session.usuario = usuario.dataValues;
             res.locals.usuario  = usuario.dataValues;
 

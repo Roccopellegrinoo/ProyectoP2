@@ -23,7 +23,7 @@
                        <li> Bienvenido <%= locals.usuario.apellido%>  <%= locals.usuario.nombre%> @<%= locals.usuario.usuario%></li>
                         <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
                         <li><a href="/posts/agregarPost"><i class="fa-regular fa-square-plus"></i></a></li>
-                        <li><a href="/users/miPerfil/1"><i class="fa-regular fa-user"></i></a></li>
+                        <li><a href="/users/miPerfil/<%=locals.usuario.id%> "><i class="fa-regular fa-user"></i></a></li>
                         <li><a href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                 <% } %> 
             </ul>

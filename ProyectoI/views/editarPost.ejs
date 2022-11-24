@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+ >
+
+<%- include('./partials/head') %>
+
+    <body>
+        <%- include('./partials/header') %>
+
+            <main>
+                <section class="center main-content">
+                    <h1>Editar Post</h1>
+                    <form action="/posts/modificarPost/<%=post.id%>" method="post">
+                       
+                        <div>
+                            <label for="Post">texto descriptivo</label>
+                            <input required value="<%=post.texto_descriptivo%>" type="text" name="descriptivo" placeholder="escribi un texto" >
+                        </div>
+                        <div>
+                            <label for="Post">texto</label>
+                            <input required value="<%=post.texto%>" type="text" name="texto" placeholder="escribi un texto" >
+                        </div>
+                        <div>
+                            <input type="submit">
+                        </div>
+
+                    </form>
+                </section>
+            </main>
+
+            <%- include('./partials/footer') %>
+
+
+    </body>
+
+</html>

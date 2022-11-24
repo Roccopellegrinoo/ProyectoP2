@@ -1,7 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const Posteo = sequelize.define('Posteo', {
-    // Model attributes are defined here
+    
+    let alias = "Posteo";
+
+        let cols = {
         id:{
             autoIncrement: true,
             primaryKey:true,
@@ -20,26 +22,33 @@ module.exports = function(sequelize, DataTypes) {
         imagen:{
             type: DataTypes.STRING
         },
+    }
        
-    }, {
-    tableName: 'posteos', //di la tabla no se llama en plural como el modelo, por ejemplo nuestra tabla de jugadores osea PLAYER en modelo se tiene que llamar PLAYERS LA TABLA
-    timestamps: true, //me lo devuelve solo, en la base la tabla no tiene timestamps, serian si no tiene campos createdAT y updatedAT
-    underscored: false, 
-    });
-
-    Posteo.associate = (models) => {
-        Posteo.belongsTo(models.Usuario,{
-            foreignKey: 'id_usuario',
-            as:'usuario'
-
-        })
-        Posteo.hasMany(models.Comentario,{
-            foreignKey:'id_post'
-        })
-
-        
+    
+    let config = {
+    tableName: 'posteos', 
+    timestamps: true, 
+    underscored: false
     };
 
-    // `sequelize.define` also returns the model
+    const Posteo = sequelize.define(alias, cols, config);
+
+
+    Posteo.associate = (models) => {
+        models.Posteo.belongsTo( models.Usuario, {
+            as : 'usuario',
+            foreignKey : 'id_usuario',
+            onDelete: 'cascade' 
+        })
+
+        models.Posteo.hasMany( models.Comentario, {
+            as : 'Comentarios',
+            foreignKey : 'id_post',
+            onDelete: 'cascade' 
+        })
+
+    }
+
+   
     return Posteo; 
 }

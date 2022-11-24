@@ -9,46 +9,44 @@
     <main>
         <section class="center main-content">
         <h1>Resultados de búsqueda.</h1>
-        
-        
-      <% for( let i = 0; i < posteo.length; i++ ) { %>
-        <article class="post">
-            <div class="info-usuario ">
-                <img class="img-perfil" src="<%=posteo[i].fotoPerfil%>" alt="">
-                <h4>
-                    <a href="/users/detalleUsuario/<%=posteo[i].id_usuario%>"><%=posteo[i].username%> </a>
-                </h4>
-            </div>
-            <div class="post-body">
-                <a href='/post/detalle/<%= posteo[i].id_posteo%> '>
-                    <img src="<%= posteo[i].foto%> " alt="">
-                    <p><%= posteo[i].texto %> </p>
-                </a>
-            </div>
-            <ul class="post-reacciones">
-                <li>
-                    <i class="fa-regular fa-heart"></i>
-                </li>
-                <li>
-                    <i class="fa-regular fa-comment"></i>
-                </li>
+        <% if(posteos.length == 0) { %>
+            <p>No hay resultados de busqueda</p>
+        <% } %> 
+        <% for( let i = 0; i < posteos.length; i++ ) { %>
+            <article class="post">
+                <div class="info-usuario ">
+                    <img class="img-perfil" src="/images/usuarios/<%= posteos[i].usuario.foto %>" alt="">
+                    <h4>
+                        <a href='/users/detalleUsuario/<%= posteos[i].id_usuario %>'><%= posteos[i].usuario.usuario %> </a>
+                    </h4>
+                </div>
+                <div class="post-body">
+                    <a href='/posts/detallePost/<%= posteos[i].id %>'>
+                        <img src="/images/posteos/<%= posteos[i].imagen %>" alt="">
+                        <p><%= posteos[i].texto_descriptivo %></p>
+                    </a>
+                </div>
+                <ul class="post-reacciones">   
+ <li>
+    <i class="fa-regular fa-heart"></i>
+    </li>
+    <li>
+        <i class="fa-regular fa-comment"></i>
+        </li>
+        <div class="post-comentarios">
+            <h4>Comentarios</h4>
+            <ul>
+                <% for(let j=0; j < posteos[i].Comentarios.length; j++) { %>
+                    <li>
+                        <a href="/users/detalleUsuario/<%= posteos[i].Comentarios[j].id %>"><%= posteos[i].Comentarios[j].usuario.usuario %></a>
+                        <span><%= posteos[i].Comentarios[j].texto  %> </span>
+                    </li>
+                <% } %>
+                <a href="/posts/detallePost/<%= posteos[i].id %>">Ver más...</a>
             </ul>
-            <div class="post-comentarios">
-                <h4>Comentarios</h4>
-                <ul>
-                    <li>
-                        <a href="/users/detalleUsuario/1"><%= posteo[i].comentarios[0].nombre %></a>
-                        <span><%= posteo[i].comentarios[0].texto  %> </span>
-                    </li>
-                    <li>
-                        <a href="/users/detalleUsuario/1"><%= posteo[i].comentarios[1].nombre %></a>
-                        <span><%= posteo[i].comentarios[1].texto  %> </span>
-                    </li>
-                    <a href="/">Ver más...</a>
-                </ul>
-            </div>
-        </article>
-      <% } %>
+        </div>
+    </article>
+<% } %>   
         </section>
     </main>
     <%- include('./partials/footer') %> 

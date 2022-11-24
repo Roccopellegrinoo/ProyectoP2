@@ -7,19 +7,18 @@
 
     <main>
         <section class="center main-content">
-            <% for (let i=0; i<data.length; i++){  %> 
+            <% for (let i=0; i<posteos.length; i++){  %> 
             <article class="post">
                 <div class="info-usuario ">
-                    <img class="img-perfil" src="<%=data[i].fotoPerfil%> " alt="">
+                    <img class="img-perfil" src="/images/usuarios/<%=posteos[i].usuario.foto%> " alt="">
                     <h4>
-                        <a href='/users/detalleUsuario/<%=data[i].id_usuario%>'><%=data[i].username %> </a>
+                        <a href='/users/detalleUsuario/<%=posteos[i].id_usuario%>'><%=posteos[i].usuario.usuario %> </a>
                     </h4>
                 </div>
                 <div class="post-body">
-                    <% let url = `/posts/detallePost/${i}` %> 
-                    <a href='/posts/detallePost/<%= data[i].id_posteo%> '>
-                        <img src="<%= data[i].foto%> " alt="">
-                        <p><%= data[i].texto %> </p>
+                    <a href='/posts/detallePost/<%= posteos[i].id%> '>
+                        <img src="/images/posteos/<%= posteos[i].imagen%> " alt="">
+                        <p><%= posteos[i].texto_descriptivo %> </p>
                     </a>
                 </div>
                 <ul class="post-reacciones">
@@ -33,15 +32,13 @@
                 <div class="post-comentarios">
                     <h4>Comentarios</h4>
                     <ul>
-                        <li>
-                            <a href="/users/detalleUsuario/1"><%= data[i].comentarios[0].nombre %></a>
-                            <span><%= data[i].comentarios[0].texto  %> </span>
-                        </li>
-                        <li>
-                            <a href="/users/detalleUsuario/1"><%= data[i].comentarios[1].nombre %></a>
-                            <span><%= data[i].comentarios[1].texto  %> </span>
-                        </li>
-                        <a href="/">Ver más...</a>
+                        <% for(let j=0; j < posteos[i].Comentarios.length; j++) { %>
+                            <li>
+                                <a href="/users/detalleUsuario/<%= posteos[i].Comentarios[j].id %>"><%= posteos[i].Comentarios[j].usuario.usuario %></a>
+                                <span><%= posteos[i].Comentarios[j].texto  %> </span>
+                            </li>
+                        <% } %>
+                        <a href="/posts/detallePost/<%= posteos[i].id %>">Ver más...</a>
                     </ul>
                 </div>
             </article>
