@@ -61,7 +61,7 @@ const usersController = {
 
         if (usuario != null) {
           let passEncriptada = bcrypt.compareSync(req.body.password, usuario.contrasenia)
-          if (true) { //passEncriptada
+          if (passEncriptada) {
             req.session.usuario = usuario.dataValues;
             res.locals.usuario  = usuario.dataValues;
 
