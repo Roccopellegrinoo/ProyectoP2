@@ -21,6 +21,7 @@ db.Posteo.findAll({
 
 search: function (req, res) {
   let texto = req.query.texto;
+  let ordenar = req.query.ordenar;
 
   db.Posteo.findAll({
     include: [
@@ -29,7 +30,7 @@ search: function (req, res) {
         nested:true
       }
     ],
-    order : [["createdAt", "DESC"]],
+    order : [["createdAt", ordenar]],
     where: [
       {texto: {[op.like] : "%" + texto + "%"}}
     ]
